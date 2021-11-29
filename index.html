@@ -4,6 +4,12 @@
       <title>Example</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <link rel="stylesheet" type="text/css" href="./index.css" />
+
+      <script src="./script.js" type="text/javascript" charset="utf-8"  defer></script>
+
+
+
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -12,6 +18,68 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <section class="signup" id="signup">
+        <form class="signup-form" id="">
+          <h2>Register</h2>
+          <input class="signup-input" id="" placeholder="email"/>
+          <input class="signup-input" id="" placeholder="password"/>
+          <input class="signup-input" id="" placeholder="confirm password"/>
+          <button class="signup-btn" id="" >Sign Up</button>
+        </form>
+      </section>
+
+      <section class="login" id="loginScreen">
+        <form class="signin-form">
+          <h2>Login</h2>
+          <input class="signin-input" placeholder="email"/>
+          <input class="signin-input" placeholder="password"/>
+          <button class="signin-btn">Sign In</button>
+        </form>
+      </section>
+
+      <section class="propertyScreen" id="propertyScreen">
+        <div class="propertyTop">
+          <h2>Username</h2>
+        </div>
+        <div class="messages">
+          <p>Messages</p>
+        </div>
+        <div class="propertyFunctionality">
+          <h3>Properties</h3>
+          <button class="propertyAddBtn">Add Property</button>
+        </div>
+        <div class="propertyGrid">
+          <div class="property">
+            <h6>Address</h6>
+            <h6>Tenant Number</h6>
+            <button class="propBtn">Edit</button>
+            <button class="propBtn">Delete</button>
+          </div>
+        </div>
+        <div class="bottom">
+          <button class="logoutBtn">Logout</button>
+        </div>
+      </section>
+
+      <section class="propertyFormScreen" id="propertyFormScreen">
+        <div class="propertyFormScreenTop">
+          <button>Back</button>
+          <h2>Username</h2>
+        </div>
+        <form class="propertyForm">
+          <h2>Create Property</h2>
+          <input class="propertyFormInput" required/>
+          <input class="propertyFormInput" required/>
+          <input class="propertyFormInput" required/>
+          <input class="propertyFormInput" required/>
+          <button class="propertyFormBtn">Complete</button>
+        </form>
+      </section>
+
+      <section class="tenantForm" id="tenantForm"></section>
+
+      <section class="tenantScreen" id="tenantScreen"></section>
+
+      <section class="tenantInfoScreen" id="tenantInfoScreen"></section>
     </body>
 </html>
