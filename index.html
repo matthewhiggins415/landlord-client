@@ -41,8 +41,8 @@
         <div class="propertyTop">
           <h2>Username</h2>
         </div>
-        <div class="messages">
-          <p>Messages</p>
+        <div class="propertyMessages">
+
         </div>
         <div class="propertyFunctionality">
           <h3>Properties</h3>
@@ -68,18 +68,57 @@
         </div>
         <form class="propertyForm">
           <h2>Create Property</h2>
-          <input class="propertyFormInput" required/>
-          <input class="propertyFormInput" required/>
-          <input class="propertyFormInput" required/>
-          <input class="propertyFormInput" required/>
+          <input class="propertyFormInput" placeholder="Street Address" required/>
+          <input class="propertyFormInput" placeholder="Number of Units" required/>
+          <input class="propertyFormInput" placeholder="total Rent" required/>
+          <input class="propertyFormInput" placeholder="Day of Month Rent is Due" required/>
           <button class="propertyFormBtn">Complete</button>
         </form>
       </section>
 
-      <section class="tenantForm" id="tenantForm"></section>
+      <section class="tenantScreen" id="tenantScreen">
+        <div class="tenantScreenTop">
+          <button>Back</button>
+          <h2>Username</h2>
+        </div>
+        <div class="tenantMessages">
 
-      <section class="tenantScreen" id="tenantScreen"></section>
+        </div>
+        <div class="tenantFunctionality">
+          <h3>Tenants</h3>
+          <button class="tenantAddBtn">Add Tenant</button>
+        </div>
+        <div class="tenantGrid">
+          <div class="tenant">
+            <h6>Name</h6>
+            <h6>Tenant Status</h6>
+            <button class="tenantBtn">Edit</button>
+            <button class="tenantBtn">Delete</button>
+          </div>
+        </div>
+      </section>
 
-      <section class="tenantInfoScreen" id="tenantInfoScreen"></section>
+      <section class="tenantFormScreen" id="tenantFormScreen">
+        <div class="tenantFormScreenTop">
+          <button>Back</button>
+          <h2>Username</h2>
+        </div>
+        <form class="tenantForm">
+          <h2>Create Tenant</h2>
+          <input class="tenantFormInput" placeholder="Tenant Name" required/>
+          <input class="tenantFormInput" placeholder="Tenant Email" required/>
+          <input class="tenantFormInput" placeholder="Tenant Phone" required/>
+          <input class="tenantFormInput" placeholder="Tenant Address" required/>
+          <input class="tenantFormInput" placeholder="Tenant Payment Info" required/>
+          <input class="tenantFormInput" placeholder="Tenant Monthly Rent Amount" required/>
+          <input class="tenantFormInput" placeholder="Day of Month Rent Due" required/>
+          <button class="tenantFormBtn">Complete</button>
+        </form>
+      </section>
+
+      <section class="tenantInfoScreen" id="tenantInfoScreen">
+        
+
+      </section>
     </body>
 </html>
