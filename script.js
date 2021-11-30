@@ -1,31 +1,30 @@
-let getFormFields = require("./lib/get-form-fields")
+import {onSignUp} from './auth/events'
 
-
-let signupScreen = document.getElementById("signup")
+let signupScreen = document.getElementById("signupScreen")
 let loginScreen = document.getElementById("loginScreen")
+let propertiesScreen = document.getElementById("propertiesScreen")
 let propertyFormScreen = document.getElementById("propertyFormScreen")
-let propertyForm = document.getElementById("propertyForm")
-let tenantFormScreen = document.getElementById("tenantFormScreen")
 let tenantScreen = document.getElementById("tenantScreen")
+let tenantFormScreen = document.getElementById("tenantFormScreen")
 let tenantInfoScreen = document.getElementById("tenantInfoScreen")
 
 
-// signupScreen.style.display = "none"
+// signupScreen.style.display = "block"
 loginScreen.style.display = "none"
-propertyScreen.style.display = "none"
+propertiesScreen.style.display = "none"
 propertyFormScreen.style.display = "none"
 tenantScreen.style.display = "none"
 tenantFormScreen.style.display = "none"
 tenantInfoScreen.style.display = "none"
 
-//Elements of registration view
+// Elements of registration view
 let signUpForm = document.getElementById("signupForm")
-let signUpBtn = document.getElementById("signUpBtn")
 
-const submitRegistration = (e) => {
-  e.preventDefault()
-  console.log('click working')
-  // console.log(getFormFields(signUpForm))
-}
+// const submitRegistration = (e) => {
+//   e.preventDefault()
+//   console.log('click working')
+//   // authEvents.onSignUp(e)
+//   // console.log(getFormFields(signUpForm))
+// }
 
-signUpBtn.addEventListener('click', submitRegistration())
+signUpForm.addEventListener("submit", onSignUp)
