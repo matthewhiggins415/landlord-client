@@ -26,32 +26,38 @@ const showALoginMessage = (message) => {
 //signUpSuccess
 const signUpSuccess = (responseData) => {
   console.log(responseData)
-  $("#signupScreen").fadeOut()
-  $("#loginScreen").fadeIn()
-  showALoginMessage('Registration Successful')
+  $("#signupScreen").hide()
+  $("#loginScreen").css("display", "block")
+  // showALoginMessage('Registration Successful')
 }
 
 //signUpFailure
 const signUpFailure = (responseData) => {
   console.log(responseData)
-  showARegisterMessage("Sign up failure!")
+  // showARegisterMessage("Sign up failure!")
 }
 
 
 // ---- Logging In ----
 
 //Log in success
-const logInSuccess = () => {
-
+const logInSuccess = (responseData) => {
+  console.log(responseData)
+  $("#loginScreen").hide()
+  $("#propertiesScreen").show()
+  //show a message on properties screen
 }
 
 //Log in failure
-const logInFailure = () => {
+const logInFailure = (responseData) => {
   console.log(responseData)
-  showALoginMessage("Sign in failure!")
+  // showALoginMessage("Sign in failure!")
 }
 
 module.exports = {
   signUpSuccess,
-  signUpFailure
+  signUpFailure,
+  logInSuccess,
+  logInFailure
+
 }

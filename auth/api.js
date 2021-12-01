@@ -11,8 +11,14 @@ const signUp = (data) => {
   })
 }
 
-
 //login
+const signIn = (data) => {
+  return $.ajax({
+    url: `${config.apiUrl}/sign-in`,
+    method: "POST",
+    data: data
+  })
+}
 
 
 //logout
@@ -20,4 +26,7 @@ const signUp = (data) => {
 
 //changePW
 
-module.exports = { signUp }
+module.exports = {
+  signUp,
+  signIn
+ }

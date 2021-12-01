@@ -78,9 +78,10 @@
 
 /*-- LOGIN SCREEN --*/
 
-.login {
+.loginScreen {
   width: 100vw;
   height: 100vh;
+  display: none;
 }
 
 .signInScreenMessage {
@@ -94,6 +95,8 @@
 }
 
 .signin-form {
+  height: 50%;
+  width: 50%;
   display: flex;
   position: absolute;
   left: 25vw;
@@ -106,8 +109,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0 auto;
-  height: 50%;
-  width: 50%;
 }
 
 .signin-form h2 {
@@ -116,6 +117,8 @@
 }
 
 .signin-input{
+  width: 80%;
+
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;

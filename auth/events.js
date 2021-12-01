@@ -24,9 +24,18 @@ const onSignUp = (e) => {
 }
 
 //onSignIn
+const onSignIn = (e) => {
+  e.preventDefault()
+  let form = e.target
+  let formData = getFormFields(form)
+  api.signIn(formData).then(ui.logInSuccess).catch(ui.logInFailure)
+}
 
 //onSignOut
 
 //onPasswordChange
 
-module.exports = { onSignUp }
+module.exports = {
+  onSignUp,
+  onSignIn
+ }

@@ -17,8 +17,10 @@ $(() => {
   $("#tenantInfoScreen").hide()
   // Elements of registration view
   let signUpForm = $("#signupForm")
+  let signInForm = $("#signInForm")
 
   signUpForm.on("submit", authEvents.onSignUp)
+  signInForm.on("submit", authEvents.onSignIn)
 
 
   // const submitRegistration = (e) => {

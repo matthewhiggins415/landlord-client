@@ -29,13 +29,13 @@
         </form>
       </section>
 
-      <section class="login" id="loginScreen">
-        <div class="signInScreenMessage" id="signInScreenMessage">
-        <form class="signin-form">
+      <section class="loginScreen" id="loginScreen">
+        <div class="signInScreenMessage" id="signInScreenMessage"></div>
+        <form class="signin-form" id="signInForm">
           <h2>Login</h2>
-          <input class="signin-input" placeholder="email"/>
-          <input class="signin-input" placeholder="password"/>
-          <button class="signin-btn">Sign In</button>
+          <input class="signin-input" placeholder="email" name="credentials[email]" type="email" required/>
+          <input class="signin-input" placeholder="password" name="credentials[password]" type="password" required/>
+          <button class="signin-btn" type="submit">Sign In</button>
         </form>
       </section>
 
@@ -43,7 +43,7 @@
         <div class="propertyTop">
           <h2>Username</h2>
         </div>
-        <div class="propertyMessages">
+        <div class="propertyMessages" id="propertyMessages">
 
         </div>
         <div class="propertyFunctionality">
