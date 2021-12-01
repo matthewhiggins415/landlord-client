@@ -4,10 +4,8 @@
       <title>Example</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" type="text/css" href="./index.css" />
 
-      <script src="./script.js" type="text/javascrip" charset="utf-8"  defer></script>
-
+      <link rel="stylesheet" href="./app/styles/index.scss">
 
 
       <!-- Do not add `link` tags-->
@@ -21,9 +19,9 @@
       <section class="signup" id="signupScreen">
         <form class="signup-form" id="signupForm">
           <h2>Register</h2>
-          <input class="signup-input" id="signUpEmail" placeholder="email"/>
-          <input class="signup-input" id="signUpPw" placeholder="password"/>
-          <input class="signup-input" id="signUpPwConfirm" placeholder="confirm password"/>
+          <input class="signup-input" name="credentials[email]" id="signUpEmail" placeholder="email" type="email" required/>
+          <input class="signup-input" name="credentials[password]" id="signUpPw" placeholder="password" type="password" required/>
+          <input class="signup-input" name="credentials[password_confirmation]" id="signUpPwConfirm" placeholder="confirm password"  type="password" required/>
           <button class="signup-btn" id="signUpBtn" type="submit">Sign Up</button>
         </form>
       </section>

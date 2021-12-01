@@ -1,12 +1,11 @@
 //Make all Api calls here.
-
-import store from '../app/store'
-import config from '../app/config'
+const config = require('../app/config')
+const store = require('../app/store')
 
 //signup
 const signUp = (data) => {
   return $.ajax({
-    url: `${config.apiUrl}/signup`,
+    url: `${config.apiUrl}/sign-up`,
     method: "POST",
     data: data
   })

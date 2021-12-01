@@ -5,6 +5,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 
+
 //1. For each needed functionality define a function that takes an 'event' as param.
 // 2. within that function prevent page refresh
 // 3. define the form as a variable from the event
@@ -15,12 +16,11 @@ const ui = require('./ui')
 
 
 //onSignUp
-export const onSignUp = (e) => {
+const onSignUp = (e) => {
   e.preventDefault()
   let form = e.target
   let formData = getFormFields(form)
-  console.log(formData)
-  // api.signUp(formData)
+  api.signUp(formData).then(ui.signUpSuccess).catch(ui.signUpFailure)
 }
 
 //onSignIn
@@ -28,3 +28,5 @@ export const onSignUp = (e) => {
 //onSignOut
 
 //onPasswordChange
+
+module.exports = { onSignUp }

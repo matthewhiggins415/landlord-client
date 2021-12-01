@@ -4,6 +4,29 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+const authEvents = require("../auth/events")
+
 $(() => {
   // your JS code goes here
+  $("#signupScreen").show()
+  $("#loginScreen").hide()
+  $("#propertiesScreen").hide()
+  $("#propertyFormScreen").hide()
+  $("#tenantScreen").hide()
+  $("#tenantFormScreen").hide()
+  $("#tenantInfoScreen").hide()
+  // Elements of registration view
+  let signUpForm = $("#signupForm")
+
+  signUpForm.on("submit", authEvents.onSignUp)
+
+
+  // const submitRegistration = (e) => {
+  //   e.preventDefault()
+  //   console.log('click working')
+  //   // authEvents.onSignUp(e)
+  //   // console.log(getFormFields(signUpForm))
+  // }
+
+  // signUpForm.addEventListener("submit", onSignUp)
 })
