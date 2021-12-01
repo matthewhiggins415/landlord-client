@@ -37,12 +37,13 @@ const signUpFailure = (responseData) => {
   // showARegisterMessage("Sign up failure!")
 }
 
-
 // ---- Logging In ----
 
 //Log in success
 const logInSuccess = (responseData) => {
   console.log(responseData)
+  let token = responseData.user.token
+  store.user.token = token
   $("#loginScreen").hide()
   $("#propertiesScreen").show()
   //show a message on properties screen
@@ -54,10 +55,28 @@ const logInFailure = (responseData) => {
   // showALoginMessage("Sign in failure!")
 }
 
+// ---- LogOut ----
+
+//Logout Success
+const logOutSuccess = (responseData) => {
+  console.log(responseData)
+  $("#propertiesScreen").hide()
+  $("#loginScreen").show()
+  //message "signout success"
+}
+
+//Logout Failure
+const logOutFailure = (responseData) => {
+  console.log(responseData)
+
+}
+
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   logInSuccess,
-  logInFailure
-
+  logInFailure,
+  logOutSuccess,
+  logOutFailure
 }

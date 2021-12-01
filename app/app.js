@@ -18,9 +18,11 @@ $(() => {
   // Elements of registration view
   let signUpForm = $("#signupForm")
   let signInForm = $("#signInForm")
+  let logoutBtn = $("#logoutBtn")
 
   signUpForm.on("submit", authEvents.onSignUp)
   signInForm.on("submit", authEvents.onSignIn)
+  logoutBtn.on("click", authEvents.onSignOut)
 
 
   // const submitRegistration = (e) => {

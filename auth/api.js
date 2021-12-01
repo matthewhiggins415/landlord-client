@@ -22,11 +22,21 @@ const signIn = (data) => {
 
 
 //logout
+const signOut = () => {
+  return $.ajax({
+    url: `${config.apiUrl}/sign-out`,
+    method: "DELETE",
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
 
 
 //changePW
 
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  signOut
  }

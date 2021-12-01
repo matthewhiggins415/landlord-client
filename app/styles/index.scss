@@ -118,7 +118,6 @@
 
 .signin-input{
   width: 80%;
-
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
@@ -229,9 +228,15 @@
 .logoutBtn {
   padding: 10px;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid darkblue;
   border-radius: 10px;
   cursor: pointer;
+  transition: 150ms ease-in;
+}
+
+.logoutBtn:hover {
+  background-color: darkblue;
+  color: white;
 }
 
 /*-- Property FORM Screen --*/

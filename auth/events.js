@@ -32,10 +32,14 @@ const onSignIn = (e) => {
 }
 
 //onSignOut
+const onSignOut = () => {
+  api.signOut().then(ui.logOutSuccess).catch(ui.logOutFailure)
+}
 
 //onPasswordChange
 
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onSignOut
  }
