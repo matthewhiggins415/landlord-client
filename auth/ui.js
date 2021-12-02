@@ -1,5 +1,6 @@
 //This file contains logic for ui functionality
 const store = require('../app/store')
+const propEvents = require("../property/events")
 
 //Messages for Registration Screen. Registration Success msg will show on login page. So rgstr screen really only shows fail msg.
 let signUpScreenMessage = $("#signupScreenMessage")
@@ -46,6 +47,7 @@ const logInSuccess = (responseData) => {
   store.user.token = token
   $("#loginScreen").hide()
   $("#propertiesScreen").show()
+  propEvents.onGetProperties()
   //show a message on properties screen
 }
 

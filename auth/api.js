@@ -20,7 +20,6 @@ const signIn = (data) => {
   })
 }
 
-
 //logout
 const signOut = () => {
   return $.ajax({

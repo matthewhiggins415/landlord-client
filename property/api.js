@@ -1,8 +1,9 @@
 const config = require('../app/config')
+const store = require("../app/store.js")
 
 //create a property
 const createProperty = () => {
-  $.ajax({
+  return $.ajax({
     url: `${config.apiUrl}/property`,
     method: "POST",
     data: data,
@@ -13,6 +14,15 @@ const createProperty = () => {
 }
 
 //get properties
+const getAllProperties = () => {
+  return $.ajax({
+    url: `${config.apiUrl}/property`,
+    method: "GET",
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
 
 //get a single property
 
@@ -21,5 +31,6 @@ const createProperty = () => {
 //delete a property
 
 module.exports = {
-  createProperty
+  createProperty,
+  getAllProperties
 }
