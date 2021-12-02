@@ -1,6 +1,13 @@
 const { properties } = require('../app/store')
 const store = require('../app/store')
 
+//Remove all children of an element
+const removeAllChildNodes = (parent) => {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild)
+  }
+}
+
 //Create property functionality
 const createPropSuccess = (responseData) => {
   console.log(responseData)
@@ -22,7 +29,7 @@ const getPropertiesSuccess = (responseData) => {
   //create a child for parent element on every loop
 
   let propertiesList = document.getElementById("propertiesList")
-
+  removeAllChildNodes(propertiesList)
 
   properties.forEach(property => {
     for (let key in property) {
