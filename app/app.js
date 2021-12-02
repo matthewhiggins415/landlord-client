@@ -5,6 +5,8 @@
 // require('./example')
 
 const authEvents = require("../auth/events")
+const propEvents = require("../property/events")
+// const navEvents = require('../navigation/navigation')
 
 $(() => {
   // your JS code goes here
@@ -15,7 +17,7 @@ $(() => {
   $("#tenantScreen").hide()
   $("#tenantFormScreen").hide()
   $("#tenantInfoScreen").hide()
-  // Elements of registration view
+  // Logic for registration, login, logout.
   let signUpForm = $("#signupForm")
   let signInForm = $("#signInForm")
   let logoutBtn = $("#logoutBtn")
@@ -24,13 +26,18 @@ $(() => {
   signInForm.on("submit", authEvents.onSignIn)
   logoutBtn.on("click", authEvents.onSignOut)
 
+  //Navigate to addPropertyScreen from home
+  $("#propertyAddBtn").on("click", () => {
+    $("#propertiesScreen").hide()
+    $("#propertyFormScreen").show()
+  })
 
-  // const submitRegistration = (e) => {
-  //   e.preventDefault()
-  //   console.log('click working')
-  //   // authEvents.onSignUp(e)
-  //   // console.log(getFormFields(signUpForm))
-  // }
+  //Navigate back to home from addPropertyScreen
+  $("#propertyFormScreenBack").on("click", () => {
+    $("#propertiesScreen").fadeIn()
+    $("#propertyFormScreen").fadeOut()
+  })
 
-  // signUpForm.addEventListener("submit", onSignUp)
+  //Add a Property functionality.
+  $("#propertyFormBtn").on("submit", propEvents.addProperty)
 })
