@@ -21,6 +21,7 @@ const onSignUp = (e) => {
   let form = e.target
   let formData = getFormFields(form)
   api.signUp(formData).then(ui.signUpSuccess).catch(ui.signUpFailure)
+  form.reset()
 }
 
 //onSignIn
@@ -29,6 +30,7 @@ const onSignIn = (e) => {
   let form = e.target
   let formData = getFormFields(form)
   api.signIn(formData).then(ui.logInSuccess).catch(ui.logInFailure)
+  form.reset()
 }
 
 //onSignOut

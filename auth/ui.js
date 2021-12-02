@@ -68,7 +68,6 @@ const logOutSuccess = (responseData) => {
 //Logout Failure
 const logOutFailure = (responseData) => {
   console.log(responseData)
-
 }
 
 
