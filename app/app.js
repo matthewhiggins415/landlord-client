@@ -44,5 +44,5 @@ $(() => {
   })
 
   //Add a Property functionality.
-  $("#propertyFormBtn").on("submit", propEvents.addProperty)
+  $("#addAPropertyForm").on("submit", propEvents.onAddProperty)
 })

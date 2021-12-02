@@ -2,7 +2,7 @@ const config = require('../app/config')
 const store = require("../app/store.js")
 
 //create a property
-const createProperty = () => {
+const createProperty = (data) => {
   return $.ajax({
     url: `${config.apiUrl}/property`,
     method: "POST",

@@ -2,11 +2,29 @@ const api = require("./api")
 const ui = require("./ui")
 const getFormFields = require('../lib/get-form-fields')
 
+
+
 //Add a property event
 const onAddProperty = (e) => {
   e.preventDefault()
   let form = e.target
-  let formData = getFormFields(form)
+  let address = form.elements["address"].value
+  let numOfUnits = form.elements["numOfUnits"].value
+  let totalRent = form.elements["totalRent"].value
+  let DayRentDue = form.elements["DayRentDue"].value
+  let formData = {
+    property: {
+      address,
+      numOfUnits,
+      totalRent,
+      DayRentDue
+    }
+  }
+
+  console.log(formData)
+  // let formData = getFormFields(form)]\
+  // let formData = document.getElementById("addAPropertyForm").getElementsByTagName("input");
+  // console.log(formData)
   api.createProperty(formData).then(ui.createPropSuccess).catch(ui.createPropFailure)
 }
 

@@ -68,12 +68,12 @@
           <button class="propertyFormScreenBack" id="propertyFormScreenBack">Back</button>
           <h2>Username</h2>
         </div>
-        <form class="propertyForm">
+        <form class="propertyForm" id="addAPropertyForm">
           <h2>Create Property</h2>
-          <input class="propertyFormInput" placeholder="Street Address" required/>
-          <input class="propertyFormInput" placeholder="Number of Units" required/>
-          <input class="propertyFormInput" placeholder="total Rent" required/>
-          <input class="propertyFormInput" placeholder="Day of Month Rent is Due" required/>
+          <input class="propertyFormInput" name="address" placeholder="Street Address (String)" type="text" required/>
+          <input class="propertyFormInput" name="numOfUnits" placeholder="Number of Units (Number)" type="number" required/>
+          <input class="propertyFormInput" name="totalRent" placeholder="total Rent (Number)" type="number" required/>
+          <input class="propertyFormInput" name="DayRentDue" placeholder="Day of Month Rent is Due (Number)" type="number" required/>
           <button class="propertyFormBtn" id="propertyFormBtn" type="submit">Complete</button>
         </form>
       </section>

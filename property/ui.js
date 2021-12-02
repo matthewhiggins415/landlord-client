@@ -1,4 +1,3 @@
-const { properties } = require('../app/store')
 const store = require('../app/store')
 
 //Remove all children of an element
