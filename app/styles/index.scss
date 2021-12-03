@@ -213,6 +213,14 @@
   justify-content: space-evenly;
   align-items: center;
   border: 1px solid lightgray;
+  transition: 150ms ease;
+}
+
+.property:hover {
+  background-color: darkblue;
+  border: 1px solid darkblue;
+  color: white;
+  cursor: pointer;
 }
 
 .propBtn {

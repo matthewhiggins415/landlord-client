@@ -45,4 +45,6 @@ $(() => {
 
   //Add a Property functionality.
   $("#addAPropertyForm").on("submit", propEvents.onAddProperty)
+
+  //Navigate to PropertyDetails Page
 })

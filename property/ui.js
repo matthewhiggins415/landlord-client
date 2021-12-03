@@ -22,9 +22,15 @@ const createPropSuccess = (responseData) => {
   properties.forEach(property => {
     for (let key in property) {
       if (key === 'address') {
-        let p = document.createElement("p")
         let address = property[key]
-        propertiesList.append(`${address}`, p)
+        let div = document.createElement("div")
+        div.classList.add("property")
+        let p = document.createElement("p")
+        let button = document.createElement("button")
+        button.classList.add("propBtn")
+
+        propertiesList.append(div)
+        div.append(`${address}`, p)
       }
     }
   })
@@ -45,9 +51,22 @@ const getPropertiesSuccess = (responseData) => {
   properties.forEach(property => {
     for (let key in property) {
       if (key === 'address') {
-        let p = document.createElement("p")
+        //create the div
+        //add class of "property"
+        //add the p element to the div
+        //add the button element with name of "edit" to div
+        //Add class of "propBtn" to button element
+        // let p = document.createElement("p")
+        // propertiesList.append(`${address}`, p)
         let address = property[key]
-        propertiesList.append(`${address}`, p)
+        let div = document.createElement("div")
+        div.classList.add("property")
+        let p = document.createElement("p")
+        let button = document.createElement("button")
+        button.classList.add("propBtn")
+
+        propertiesList.append(div)
+        div.append(`${address}`, p)
       }
     }
   })
