@@ -20,12 +20,8 @@ const onAddProperty = (e) => {
       DayRentDue
     }
   }
-
-  console.log(formData)
-  // let formData = getFormFields(form)]\
-  // let formData = document.getElementById("addAPropertyForm").getElementsByTagName("input");
-  // console.log(formData)
   api.createProperty(formData).then(ui.createPropSuccess).catch(ui.createPropFailure)
+  form.reset()
 }
 
 //Get a Users properties
