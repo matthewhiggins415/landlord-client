@@ -24,6 +24,7 @@ const createPropSuccess = (responseData) => {
       if (key === 'address') {
         let address = property[key]
         let div = document.createElement("div")
+        div.setAttribute('id', 'propertyFromList')
         div.classList.add("property")
         let p = document.createElement("p")
         let button = document.createElement("button")
@@ -31,6 +32,12 @@ const createPropSuccess = (responseData) => {
 
         propertiesList.append(div)
         div.append(`${address}`, p)
+
+        $("#propertyFromList").on("click", () => {
+          console.log("clicked")
+          $("#propertiesScreen").fadeOut()
+          $("#tenantScreen").fadeIn()
+        })
       }
     }
   })
@@ -60,16 +67,25 @@ const getPropertiesSuccess = (responseData) => {
         // propertiesList.append(`${address}`, p)
         let address = property[key]
         let div = document.createElement("div")
+        div.setAttribute('id', 'propertyFromList')
         div.classList.add("property")
         let p = document.createElement("p")
         let button = document.createElement("button")
         button.classList.add("propBtn")
+          //load tenant screen info
 
-        propertiesList.append(div)
-        div.append(`${address}`, p)
+          propertiesList.append(div)
+          div.append(`${address}`, p)
+        }
       }
-    }
-  })
+    })
+
+
+      $(".property").on("click", () => {
+        $("#propertiesScreen").fadeOut()
+        $("#tenantScreen").fadeIn()
+      })
+
 }
 
 const getPropertiesFailure = (responseData) => {

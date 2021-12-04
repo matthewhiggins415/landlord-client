@@ -46,5 +46,14 @@ $(() => {
   //Add a Property functionality.
   $("#addAPropertyForm").on("submit", propEvents.onAddProperty)
 
-  //Navigate to PropertyDetails Page
+  $("#tenantScreenBackBtn").on("click", () => {
+    $("#tenantScreen").fadeOut()
+    $("#propertiesScreen").fadeIn()
+    propEvents.onGetProperties()
+  })
+
+  //Navigate to PropertyDetails Page, cannot be added here. needs to be added to where ha element was added to dom. so ui
+
+  // --- Tenant Screen
+
 })

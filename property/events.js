@@ -26,7 +26,9 @@ const onAddProperty = (e) => {
 
 //Get a Users properties
 const onGetProperties = () => {
-  api.getAllProperties().then(ui.getPropertiesSuccess).catch(ui.getPropertiesFailure)
+  api.getAllProperties()
+  .then(ui.getPropertiesSuccess)
+  .catch(ui.getPropertiesFailure)
 }
 
 module.exports = {
