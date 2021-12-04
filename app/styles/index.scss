@@ -206,8 +206,10 @@
 
 .property {
   border-radius: 10px;
-  height: 10%;
-  width: 100%;
+  height: auto;
+  width: 90%;
+  padding: 10px;
+  margin: 3px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -217,17 +219,22 @@
 }
 
 .property:hover {
-  background-color: darkblue;
   border: 1px solid darkblue;
-  color: white;
-  cursor: pointer;
 }
 
 .propBtn {
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  color: lightgray;
   background-color: white;
   padding: 4px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+
+.propBtn:hover {
+  color: darkblue;
+  border: 1px solid darkblue;
 }
 
 .bottom {
@@ -364,9 +371,32 @@
   border-radius: 10px;
 }
 
-.tenantMessages {
-  width: 100%;
-  height: 15%;
+.propertyDetailsInfo {
+  width: 50%;
+  height: 10px auto;
+  padding: 10px;
+  border: 1px solid darkblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px auto;
+}
+
+.propDelete {
+  border: 1px solid darkblue;
+  background-color: white;
+  color: darkblue;
+  cursor: pointer;
+  transition: 250ms ease-in;
+  width: 30%;
+  margin: 10px auto;
+  padding: 10px
+}
+
+.propDelete:hover {
+  background-color: darkblue;
+  color: white;
 }
 
 .tenantFunctionality{

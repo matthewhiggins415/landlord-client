@@ -26,10 +26,6 @@ $(() => {
   signInForm.on("submit", authEvents.onSignIn)
   logoutBtn.on("click", authEvents.onSignOut)
 
-  const getAllProperties = () => {
-    $("#propertiesScreen").load(propEvents.onGetProperties)
-  }
-
   //Navigate to addPropertyScreen from home
   $("#propertyAddBtn").on("click", () => {
     $("#propertiesScreen").hide()

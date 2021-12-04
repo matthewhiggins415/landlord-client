@@ -25,6 +25,15 @@ const getAllProperties = () => {
 }
 
 //get a single property
+const getASingleProperty = (id) => {
+  return $.ajax({
+    url: `${config.apiUrl}/property/${id}`,
+    method: "GET",
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
 
 //edit a property
 
@@ -32,5 +41,6 @@ const getAllProperties = () => {
 
 module.exports = {
   createProperty,
-  getAllProperties
+  getAllProperties,
+  getASingleProperty
 }

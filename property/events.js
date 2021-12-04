@@ -1,8 +1,5 @@
 const api = require("./api")
 const ui = require("./ui")
-const getFormFields = require('../lib/get-form-fields')
-
-
 
 //Add a property event
 const onAddProperty = (e) => {
@@ -31,7 +28,16 @@ const onGetProperties = () => {
   .catch(ui.getPropertiesFailure)
 }
 
+
+//Get A Property's Details
+const onGetPropertyDetails = (id) => {
+  console.log('it fucking worked')
+  console.log(`${id}`)
+  // api.getASingleProperty(id).then(ui.getAPropertySuccess).catch(ui.getAPropertyFailure)
+}
+
 module.exports = {
   onAddProperty,
-  onGetProperties
+  onGetProperties,
+  onGetPropertyDetails
 }
