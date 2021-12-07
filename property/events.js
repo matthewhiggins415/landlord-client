@@ -60,6 +60,8 @@ const onEditProperty = (e) => {
   }
   //api call
   api.updateASingleProperty(formData)
+  .then(ui.updatePropSuccess)
+  .catch(ui.updatePropFailure)
 
   form.reset()
 }

@@ -38,7 +38,14 @@ const getASingleProperty = (id) => {
 //edit a property
 const updateASingleProperty = (formData) => {
   let id = store.property._id
-  console.log(id, "update api call made")
+  return $.ajax({
+    url: `${config.apiUrl}/property/${id}`,
+    method: "PATCH",
+    data: formData,
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
 }
 
 //delete a property

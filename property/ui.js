@@ -188,6 +188,32 @@ const destroyPropFailure = (responseData) => {
   console.log(responseData)
 }
 
+
+// UPDATE A property
+const updatePropSuccess = (responseData) => {
+  console.log(responseData)
+  store.property = responseData.property
+
+  let prevDetails = document.getElementById("propertyDetailsInfoTenantScreen")
+  removeAllChildNodes(prevDetails)
+
+  let div = $("#propertyDetailsInfoTenantScreen")
+
+  let p1 = document.createElement("p")
+  let p2 = document.createElement("p")
+  let p3 = document.createElement("p")
+  let p4 = document.createElement("p")
+
+  div.append(`Address: ${responseData.property.address}`, p1)
+  div.append(` Number of Units: ${responseData.property.numOfUnits}`, p2)
+  div.append(` Total Rent: ${responseData.property.numOfUnits}`, p3)
+  div.append(` Rent due the ${responseData.property.numOfUnits}th of each month`, p4)
+}
+
+const updatePropFailure = (responseData) => {
+  console.log(responseData)
+}
+
 module.exports = {
   createPropSuccess,
   createPropFailure,
@@ -196,6 +222,7 @@ module.exports = {
   getAPropertySuccess,
   getAPropertyFailure,
   destroyPropSuccess,
-  destroyPropFailure
-
+  destroyPropFailure,
+  updatePropSuccess,
+  updatePropFailure
 }

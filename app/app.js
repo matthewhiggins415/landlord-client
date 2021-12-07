@@ -142,6 +142,16 @@ $(() => {
   let propEditForm = $("#propertyEditForm")
   propEditForm.on("submit", propEvents.onEditProperty)
 
+  $("#editPropSave").on("click", () => {
+    $("#propDetailsEdith4").hide()
+    $("#propDetailsh4").fadeIn()
+    $("#propEditCancel").hide()
+    $("#propDelete").fadeIn()
+    $("#propEditBtn").fadeIn()
+    $("#propertyEditFormContainer").hide()
+    $("#propertyDetailsInfoTenantScreen").fadeIn()
+  })
+
 
 
 })
