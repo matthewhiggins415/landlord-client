@@ -22,6 +22,7 @@ $(() => {
   $("#propDetailsEdith4").hide()
   $("#propEditCancel").hide()
   $("#propertyEditFormContainer").hide()
+  $("#alertMessage").hide()
 
   // Logic for registration, login, logout.
   let signUpForm = $("#signupForm")

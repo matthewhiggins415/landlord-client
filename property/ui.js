@@ -6,12 +6,25 @@ const { property } = require('../app/store')
 const onGetPropertyDetails = (id) => {
   api.getASingleProperty(id).then(getAPropertySuccess).catch(getAPropertyFailure)
 }
-
 //Remove all children of an element
 const removeAllChildNodes = (parent) => {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild)
   }
+}
+
+//Create an event message
+const fireMessage = (message) => {
+  let messageElement = document.getElementById("alertMessage")
+  removeAllChildNodes(messageElement)
+  let p = document.createElement("p")
+  messageElement.append(`${message}`, p)
+
+  $("#alertMessage").fadeIn()
+
+  setTimeout(() => {
+    $("#alertMessage").fadeOut()
+  }, 3000)
 }
 
 //Create property functionality
@@ -20,6 +33,8 @@ const createPropSuccess = (responseData) => {
 
   $("#propertyFormScreen").fadeOut()
   $("#propertiesScreen").fadeIn()
+
+  fireMessage("New property created!")
 
   let properties = store.properties
 
@@ -149,6 +164,8 @@ const destroyPropSuccess = (responseData) => {
   $("#tenantScreen").fadeOut()
   $("#propertiesScreen").show()
 
+  fireMessage("Property Deleted!")
+
   let remainingProperties = store.properties
 
   let propertiesList = document.getElementById("propertiesList")
@@ -208,6 +225,8 @@ const updatePropSuccess = (responseData) => {
   div.append(` Number of Units: ${responseData.property.numOfUnits}`, p2)
   div.append(` Total Rent: ${responseData.property.numOfUnits}`, p3)
   div.append(` Rent due the ${responseData.property.numOfUnits}th of each month`, p4)
+
+  fireMessage("Property Updated!")
 }
 
 const updatePropFailure = (responseData) => {
