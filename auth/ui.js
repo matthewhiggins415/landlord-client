@@ -2,25 +2,27 @@
 const store = require('../app/store')
 const propEvents = require("../property/events")
 
-//Messages for Registration Screen. Registration Success msg will show on login page. So rgstr screen really only shows fail msg.
-let signUpScreenMessage = $("#signupScreenMessage")
+//Remove all children of an element
+const removeAllChildNodes = (parent) => {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild)
+  }
+}
 
-const showARegisterMessage = (message) => {
-  signUpScreenMessage.text(`${message}`).css("display", "block")
-  setTimeout(function () {
-    signUpScreenMessage.empty().css("display", "none")
+//Alert Messages
+const fireMessage = (message) => {
+  let messageElement = document.getElementById("alertMessage")
+  removeAllChildNodes(messageElement)
+  let p = document.createElement("p")
+  messageElement.append(`${message}`, p)
+
+  $("#alertMessage").fadeIn()
+
+  setTimeout(() => {
+    $("#alertMessage").fadeOut()
   }, 3000)
 }
 
-//Login Screen Msg
-let signInMessage = $("#signInScreenMessage")
-
-const showALoginMessage = (message) => {
-  signInMessage.text(`${message}`).css("display", "block")
-  setTimeout(function () {
-    signInMessage.empty().css("display", "none")
-  }, 3000)
-}
 
 // ---- Registering ----
 
@@ -29,13 +31,13 @@ const signUpSuccess = (responseData) => {
   console.log(responseData)
   $("#signupScreen").hide()
   $("#loginScreen").css("display", "block")
-  // showALoginMessage('Registration Successful')
+  fireMessage("Registration Successful!")
 }
 
 //signUpFailure
 const signUpFailure = (responseData) => {
   console.log(responseData)
-  // showARegisterMessage("Sign up failure!")
+  fireMessage("Registration Failed!")
 }
 
 // ---- Logging In ----
@@ -48,13 +50,13 @@ const logInSuccess = (responseData) => {
   $("#loginScreen").hide()
   $("#propertiesScreen").show()
   propEvents.onGetProperties()
-  //show a message on properties screen
+  fireMessage("Login Successful!")
 }
 
 //Log in failure
 const logInFailure = (responseData) => {
   console.log(responseData)
-  // showALoginMessage("Sign in failure!")
+  fireMessage("Login Failed!")
 }
 
 // ---- LogOut ----
@@ -64,12 +66,13 @@ const logOutSuccess = (responseData) => {
   console.log(responseData)
   $("#propertiesScreen").hide()
   $("#loginScreen").show()
-  //message "signout success"
+  fireMessage("Logout Successful!")
 }
 
 //Logout Failure
 const logOutFailure = (responseData) => {
   console.log(responseData)
+  fireMessage("Logout Failed!")
 }
 
 
