@@ -131,6 +131,10 @@ const getAPropertySuccess = (responseData) => {
   div.append(` Total Rent: ${responseData.property.numOfUnits}`, p3)
   div.append(` Rent due the ${responseData.property.numOfUnits}th of each month`, p4)
 
+  //add name of id to delete button
+  let id = responseData.property._id
+  let confirmPropDel = document.getElementById("yesDeleteProp")
+  confirmPropDel.name = id
 }
 
 const getAPropertyFailure = (responseData) => {

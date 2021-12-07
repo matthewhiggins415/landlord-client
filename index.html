@@ -27,6 +27,9 @@
           <input class="signup-input" name="credentials[password_confirmation]" id="signUpPwConfirm" placeholder="confirm password"  type="password" required/>
           <button class="signup-btn" id="signUpBtn" type="submit">Sign Up</button>
         </form>
+
+        <button class="switchToLogin" id="toLogin">to login</button>
+
       </section>
 
       <section class="loginScreen" id="loginScreen">
@@ -37,6 +40,8 @@
           <input class="signin-input" placeholder="password" name="credentials[password]" type="password" required/>
           <button class="signin-btn" type="submit">Sign In</button>
         </form>
+
+        <button class="switchToLogin" id="toRegister">to register</button>
       </section>
 
       <section class="propertyScreen" id="propertiesScreen">
@@ -51,12 +56,7 @@
           <button class="propertyAddBtn" id="propertyAddBtn">Add Property</button>
         </div>
         <div class="propertyGrid" id="propertiesList">
-          <!-- <div class="property">
-            <p>Address</p>
-            <p>Tenant Number</p>
-            <button class="propBtn">Edit</button>
-            <button class="propBtn">Delete</button>
-          </div> -->
+
         </div>
         <div class="bottom">
           <button class="logoutBtn" id="logoutBtn">Logout</button>
@@ -80,24 +80,39 @@
 
       <section class="tenantScreen" id="tenantScreen">
         <div class="tenantScreenTop">
-          <button id="tenantScreenBackBtn">Back</button>
+          <button
+          class="tenantScreenBackBtn" id="tenantScreenBackBtn">Back</button>
           <h2>Username</h2>
         </div>
-        <div class="propertyDetailsInfo" id="propertyDetailsInfoTenantScreen">
+        <div class="tenantScreenBody">
+          <div class="propDetailsContainer">
+            <h4 id="propDetailsh4">Property Details</h4>
+            <div class="propertyDetailsInfo" id="propertyDetailsInfoTenantScreen">
 
 
-        </div>
-          <button class="propDelete" id="propDelete">Delete Property</button>
-        <div class="tenantFunctionality">
-          <h3>Tenants</h3>
-          <button class="tenantAddBtn">Add Tenant</button>
-        </div>
-        <div class="tenantGrid">
-          <div class="tenant">
-            <h6>Name</h6>
-            <h6>Tenant Status</h6>
-            <button class="tenantBtn">Edit</button>
-            <button class="tenantBtn">Delete</button>
+            </div>
+
+            <div class="confirmDeleteContainer" id="confirmDeleteContainer">
+              <h4>Confirm Deletion</h4>
+              <button id="yesDeleteProp" class="yesDeleteProp">Yes</button>
+              <button id="noDeleteProp" class="noDeleteProp">No</button>
+            </div>
+
+            <button class="propDelete" type="button" id="propDelete">Delete Property</button>
+          </div>
+          <div class="tenantContainer">
+            <div class="tenantFunctionality">
+              <h3>Tenants</h3>
+
+            </div>
+            <div class="tenantGrid">
+              <div class="tenant">
+                <h6>Name</h6>
+                <h6>Tenant Status</h6>
+
+              </div>
+            </div>
+            <button class="tenantAddBtn">Add Tenant</button>
           </div>
         </div>
       </section>

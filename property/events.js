@@ -31,13 +31,19 @@ const onGetProperties = () => {
 
 //Get A Property's Details
 const onGetPropertyDetails = (id) => {
-  console.log('it fucking worked')
   console.log(`${id}`)
   // api.getASingleProperty(id).then(ui.getAPropertySuccess).catch(ui.getAPropertyFailure)
+}
+
+const onDeleteProperty = () => {
+  let id = document.getElementById("yesDeleteProp").name
+  console.log(`delete resource ${id}`)
+  // api.deleteASingleProperty(id)
 }
 
 module.exports = {
   onAddProperty,
   onGetProperties,
-  onGetPropertyDetails
+  onGetPropertyDetails,
+  onDeleteProperty
 }

@@ -38,9 +38,19 @@ const getASingleProperty = (id) => {
 //edit a property
 
 //delete a property
+const deleteASingleProperty = (id) => {
+  return $.ajax({
+    url: `${config.apiUrl}/property/${id}`,
+    method: "DELETE",
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
 
 module.exports = {
   createProperty,
   getAllProperties,
-  getASingleProperty
+  getASingleProperty,
+  deleteASingleProperty
 }
