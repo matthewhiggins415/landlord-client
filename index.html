@@ -87,9 +87,25 @@
         <div class="tenantScreenBody">
           <div class="propDetailsContainer">
             <h4 id="propDetailsh4">Property Details</h4>
+            <h4 id="propDetailsEdith4">Edit Property</h4>
             <div class="propertyDetailsInfo" id="propertyDetailsInfoTenantScreen">
+            </div>
 
-
+            <div class="propertyEditFormContainer" id="propertyEditFormContainer">
+              <form id="propertyEditForm" class="propertyEditForm">
+                <input type="text" placeholder="address"
+                name="address" required/>
+                <input type="number"
+                name="numOfUnits"
+                placeholder="numbers of units" required/>
+                <input type="number"
+                name="totalRent"
+                placeholder="total monthly rent" required/>
+                <input type="number"
+                name="DayRentDue"
+                placeholder="what day of month is rent due?" required/>
+                <button type="submit" class ="propDelete">Save</button>
+              </form>
             </div>
 
             <div class="confirmDeleteContainer" id="confirmDeleteContainer">
@@ -99,6 +115,8 @@
             </div>
 
             <button class="propDelete" type="button" id="propDelete">Delete Property</button>
+            <button id="propEditCancel" class="propDelete">Cancel</button>
+            <button id="propEditBtn" class="propDelete">Edit Property</button>
           </div>
           <div class="tenantContainer">
             <div class="tenantFunctionality">
@@ -107,19 +125,19 @@
             </div>
             <div class="tenantGrid">
               <div class="tenant">
-                <h6>Name</h6>
-                <h6>Tenant Status</h6>
-
+                <p>Name</p>
+                <p>Tenant Status</p>
+                <button class="tenantDetailsBtn" id="tenantDetailsBtn">Details</button>
               </div>
             </div>
-            <button class="tenantAddBtn">Add Tenant</button>
+            <button class="tenantAddBtn" id="tenantAddBtn">Add Tenant</button>
           </div>
         </div>
       </section>
 
       <section class="tenantFormScreen" id="tenantFormScreen">
         <div class="tenantFormScreenTop">
-          <button>Back</button>
+          <button id="tenantFormScreenBackBtn">Back</button>
           <h2>Username</h2>
         </div>
         <form class="tenantForm">
@@ -137,7 +155,7 @@
 
       <section class="tenantInfoScreen" id="tenantInfoScreen">
         <div class="tenantInfoTop">
-          <button>Back</button>
+          <button id="tenantInfoScreenBackBtn">Back</button>
           <h2>Username</h2>
         </div>
 

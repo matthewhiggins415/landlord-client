@@ -36,6 +36,10 @@ const getASingleProperty = (id) => {
 }
 
 //edit a property
+const updateASingleProperty = (formData) => {
+  let id = store.property._id
+  console.log(id, "update api call made")
+}
 
 //delete a property
 const deleteASingleProperty = (id) => {
@@ -53,5 +57,6 @@ module.exports = {
   createProperty,
   getAllProperties,
   getASingleProperty,
-  deleteASingleProperty
+  deleteASingleProperty,
+  updateASingleProperty
 }

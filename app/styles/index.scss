@@ -418,10 +418,25 @@
   width: 90%;
   height: auto;
   padding: 10px;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.propertyEditForm {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propertyEditForm input {
+  background-color: white;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  padding: 8px;
 }
 
 .confirmDeleteContainer {
@@ -527,27 +542,30 @@
 }
 
 .tenant {
-  height: auto;
+  height: fit-content;
+  padding: 10px;
   width: 100%;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-between;
+  align-content: center;
   transition: 150ms ease-in-out;
 }
 
 .tenant:hover {
-  background-color: lightgray;
+  background-color: darkblue;
   color: white;
 }
 
-.tenantBtn {
-  border: 1px solid black;
+.tenantDetailsBtn {
+  border: 1px solid darkblue;
   background-color: white;
-  padding: 4px;
+  padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
+
 
 /*-- Tenant Form Screen --*/
 
@@ -572,7 +590,7 @@
   margin-left: 20px;
   padding: 10px;
   border-radius: 10px;
-  transition: 150ms ease-in;
+  transition: 1s ease-in-out;
 }
 
 .tenantFormScreenTop button:hover {

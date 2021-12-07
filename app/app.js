@@ -19,6 +19,10 @@ $(() => {
   $("#tenantFormScreen").hide()
   $("#tenantInfoScreen").hide()
   $("#confirmDeleteContainer").hide()
+  $("#propDetailsEdith4").hide()
+  $("#propEditCancel").hide()
+  $("#propertyEditFormContainer").hide()
+
   // Logic for registration, login, logout.
   let signUpForm = $("#signupForm")
   let signInForm = $("#signInForm")
@@ -69,6 +73,7 @@ $(() => {
     $("#propertyDetailsInfoTenantScreen").hide()
     $("#propDetailsh4").hide()
     $("#propDelete").hide()
+    $("#propEditBtn").hide()
     $("#confirmDeleteContainer").fadeIn()
   })
 
@@ -76,6 +81,7 @@ $(() => {
     $("#confirmDeleteContainer").hide()
     $("#propertyDetailsInfoTenantScreen").fadeIn()
     $("#propDetailsh4").fadeIn()
+    $("#propEditBtn").fadeIn()
     $("#propDelete").fadeIn()
   })
 
@@ -84,10 +90,58 @@ $(() => {
     $("#confirmDeleteContainer").hide()
     $("#propertyDetailsInfoTenantScreen").fadeIn()
     $("#propDetailsh4").fadeIn()
+    $("#propEditBtn").fadeIn()
     $("#propDelete").fadeIn()
   })
 
-  // --- CONFIRM Deletion of Prop - hit api
+  // --- Navigate to tenantFormScreen
+  $("#tenantAddBtn").on("click", () => {
+    $("#tenantScreen").hide()
+    $("#tenantFormScreen").fadeIn()
+  })
+
+  // --- Navigate to Back to TenantScreen
+  $("#tenantFormScreenBackBtn").on("click", () => {
+    $("#tenantFormScreen").hide()
+    $("#tenantScreen").fadeIn()
+  })
+
+  // --- Navigate to Tenant Details Screen
+  $("#tenantDetailsBtn").on("click", () => {
+    $("#tenantScreen").hide()
+    $("#tenantInfoScreen").fadeIn()
+  })
+
+  //Navigate Back
+  $("#tenantInfoScreenBackBtn").on("click", () => {
+    $("#tenantInfoScreen").hide()
+    $("#tenantScreen").fadeIn()
+  })
+
+  //EDIT PROPERTY FUNCTIONALITY
+  $("#propEditBtn").on("click", () => {
+    $("#propDetailsh4").hide()
+    $("#propDetailsEdith4").fadeIn()
+    $("#propDelete").hide()
+    $("#propEditBtn").hide()
+    $("#propEditCancel").fadeIn()
+    $("#propertyDetailsInfoTenantScreen").hide()
+    $("#propertyEditFormContainer").fadeIn()
+  })
+
+  $("#propEditCancel").on("click", () => {
+    $("#propDetailsEdith4").hide()
+    $("#propDetailsh4").fadeIn()
+    $("#propEditCancel").hide()
+    $("#propDelete").fadeIn()
+    $("#propEditBtn").fadeIn()
+    $("#propertyEditFormContainer").hide()
+    $("#propertyDetailsInfoTenantScreen").fadeIn()
+  })
+
+  let propEditForm = $("#propertyEditForm")
+  propEditForm.on("submit", propEvents.onEditProperty)
+
 
 
 })

@@ -42,9 +42,32 @@ const onDeleteProperty = () => {
   api.deleteASingleProperty(id).then(ui.destroyPropSuccess).catch(ui.destroyPropFailure)
 }
 
+const onEditProperty = (e) => {
+  e.preventDefault()
+  let form = e.target
+
+  let address = form.elements["address"].value
+  let numOfUnits = form.elements["numOfUnits"].value
+  let totalRent = form.elements["totalRent"].value
+  let DayRentDue = form.elements["DayRentDue"].value
+  let formData = {
+    property: {
+      address,
+      numOfUnits,
+      totalRent,
+      DayRentDue
+    }
+  }
+  //api call
+  api.updateASingleProperty(formData)
+
+  form.reset()
+}
+
 module.exports = {
   onAddProperty,
   onGetProperties,
   onGetPropertyDetails,
-  onDeleteProperty
+  onDeleteProperty,
+  onEditProperty
 }
