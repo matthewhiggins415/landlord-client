@@ -1,5 +1,6 @@
 const api = require("./api")
 const ui = require("./ui")
+const store = require("../app/store")
 
 //Add a property event
 const onAddProperty = (e) => {
@@ -23,6 +24,7 @@ const onAddProperty = (e) => {
 
 //Get a Users properties
 const onGetProperties = () => {
+  console.log("getting properties")
   api.getAllProperties()
   .then(ui.getPropertiesSuccess)
   .catch(ui.getPropertiesFailure)
@@ -36,9 +38,8 @@ const onGetPropertyDetails = (id) => {
 }
 
 const onDeleteProperty = () => {
-  let id = document.getElementById("yesDeleteProp").name
-  console.log(`delete resource ${id}`)
-  // api.deleteASingleProperty(id)
+  let id = store.property._id
+  api.deleteASingleProperty(id).then(ui.destroyPropSuccess).catch(ui.destroyPropFailure)
 }
 
 module.exports = {

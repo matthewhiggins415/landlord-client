@@ -39,6 +39,7 @@ const getASingleProperty = (id) => {
 
 //delete a property
 const deleteASingleProperty = (id) => {
+  console.log(`id of ${id} received by api`)
   return $.ajax({
     url: `${config.apiUrl}/property/${id}`,
     method: "DELETE",

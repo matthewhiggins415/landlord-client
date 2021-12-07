@@ -4,7 +4,8 @@ const store = {
     email: null,
     token: null
   },
-  properties: []
+  properties: [],
+  property: null
 }
 
 module.exports = store

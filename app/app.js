@@ -6,6 +6,7 @@
 
 const authEvents = require("../auth/events")
 const propEvents = require("../property/events")
+const store = require("./store")
 // const navEvents = require('../navigation/navigation')
 
 $(() => {
@@ -78,7 +79,13 @@ $(() => {
     $("#propDelete").fadeIn()
   })
 
-  $("#yesDeleteProp").on("click", propEvents.onDeleteProperty)
+  $("#yesDeleteProp").on("click", () => {
+    propEvents.onDeleteProperty()
+    $("#confirmDeleteContainer").hide()
+    $("#propertyDetailsInfoTenantScreen").fadeIn()
+    $("#propDetailsh4").fadeIn()
+    $("#propDelete").fadeIn()
+  })
 
   // --- CONFIRM Deletion of Prop - hit api
 

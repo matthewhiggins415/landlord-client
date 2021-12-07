@@ -1,10 +1,9 @@
 const store = require('../app/store')
 const propEvents = require('./events')
 const api = require("./api")
+const { property } = require('../app/store')
 
 const onGetPropertyDetails = (id) => {
-  console.log('get property deets run')
-  console.log(id)
   api.getASingleProperty(id).then(getAPropertySuccess).catch(getAPropertyFailure)
 }
 
@@ -69,6 +68,7 @@ const createPropFailure = (responseData) => {
 
 //Get Users Properties functionality
 const getPropertiesSuccess = (responseData) => {
+  console.log(store)
   store.properties = responseData.properties
   let properties = store.properties
 
@@ -112,7 +112,8 @@ const getPropertiesFailure = (responseData) => {
 //GET A SINGLE PROPERTY
 
 const getAPropertySuccess = (responseData) => {
-  console.log(responseData)
+  store.property = null;
+  store.property = responseData.property
   $("#propertiesScreen").fadeOut()
   $("#tenantScreen").fadeIn()
 
@@ -130,14 +131,60 @@ const getAPropertySuccess = (responseData) => {
   div.append(` Number of Units: ${responseData.property.numOfUnits}`, p2)
   div.append(` Total Rent: ${responseData.property.numOfUnits}`, p3)
   div.append(` Rent due the ${responseData.property.numOfUnits}th of each month`, p4)
-
-  //add name of id to delete button
-  let id = responseData.property._id
-  let confirmPropDel = document.getElementById("yesDeleteProp")
-  confirmPropDel.name = id
 }
 
 const getAPropertyFailure = (responseData) => {
+  console.log(responseData)
+}
+
+// DELETE A SINGLE PROPERTY
+
+const destroyPropSuccess = (responseData) => {
+  //responseData from server is undefined
+  let deletedPropId = store.property._id
+  let properties = store.properties
+  let updatePropertiesArr = properties.filter(prop => prop._id !== deletedPropId)
+  store.properties = updatePropertiesArr
+
+  $("#tenantScreen").fadeOut()
+  $("#propertiesScreen").show()
+
+  let remainingProperties = store.properties
+
+  let propertiesList = document.getElementById("propertiesList")
+  removeAllChildNodes(propertiesList)
+
+  remainingProperties.forEach(property => {
+    for (let key in property) {
+      if (key === 'address') {
+        let id = property._id
+
+        let btn = document.createElement("button")
+        btn.classList.add("propBtn")
+        btn.innerHTML = "details"
+        btn.type = "button"
+        btn.name = property._id
+        btn.addEventListener("click", () => {
+          onGetPropertyDetails(btn.name)
+          // propEvents.onGetPropertyDetails(btn.name)
+        })
+
+        let address = property[key]
+        let div = document.createElement("div")
+        div.setAttribute('id', 'propertyFromList')
+        div.classList.add("property")
+        let p = document.createElement("p")
+          //load tenant screen info
+
+        propertiesList.append(div)
+        div.append(`${address}`, p)
+        div.append(btn)
+      }
+    }
+  })
+}
+
+const destroyPropFailure = (responseData) => {
   console.log(responseData)
 }
 
@@ -147,5 +194,8 @@ module.exports = {
   getPropertiesSuccess,
   getPropertiesFailure,
   getAPropertySuccess,
-  getAPropertyFailure
+  getAPropertyFailure,
+  destroyPropSuccess,
+  destroyPropFailure
+
 }
