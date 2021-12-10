@@ -389,7 +389,7 @@
   justify-content: space-between;
   align-items: center;
   width: auto;
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
   height: auto;
   padding: 20px;
   border-radius: 10px;
@@ -588,7 +588,6 @@
   outline: none;
   margin: 5px auto;
   transition: 150ms ease-in-out;
-  border-bottom: 1px solid lightyellow;
 }
 
 .propertyFormInput:focus {
@@ -597,16 +596,26 @@
   border-bottom: none;
 }
 
-.propertyFormBtn {
-  background-color: transparent;
+.propertyFormInput:hover {
+  background-color: lightyellow;
   border-radius: 10px;
+  border-bottom: none;
+}
+
+.propertyFormInput::placeholder {
+  color: black;
+}
+
+.propertyFormBtn {
+  background-color:transparent;
+  border-radius: 10px;
+  border: none;
+  outline: none;
   width: 80%;
   padding: 10px;
   text-align: center;
   letter-spacing: 2px;
   margin: 20px auto;
-  border: none;
-  outline: none;
 }
 
 .propertyFormBtn:hover {
@@ -620,6 +629,7 @@
   width: 100vw;
   height: auto;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 
@@ -806,31 +816,36 @@
 
 .yesDeleteProp {
   padding: 10px;
-  border: 1px solid black;
-  background: white;
+  background: transparent;
   color: black;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
   width: 100%;
   border-radius: 10px;
   transition: 150ms ease-in-out;
 }
 
 .yesDeleteProp:hover {
-  background-color: lightgreen;
+  background-color: rgb(68, 255, 68);
 }
 
 .noDeleteProp {
   padding: 10px;
-  border: 1px solid black;
-  background: white;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
   color: black;
+  letter-spacing: 2px;
   width: 100%;
   border-radius: 10px;
   transition: 150ms ease-in-out;
-  margin-top: 10px;
 }
 
 .noDeleteProp:hover {
-  background-color: lightsalmon;
+  background-color: rgb(255, 68, 68);
 }
 
 .tenantContainer {
