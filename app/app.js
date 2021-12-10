@@ -11,7 +11,9 @@ const store = require("./store")
 
 $(() => {
   // your JS code goes here
-  $("#signupScreen").show()
+  $("#landingPage").show()
+  $("#setupPage").hide()
+  $("#signupScreen").hide()
   $("#loginScreen").hide()
   $("#propertiesScreen").hide()
   $("#propertyFormScreen").hide()
@@ -24,6 +26,37 @@ $(() => {
   $("#propertyEditFormContainer").hide()
   $("#alertMessage").hide()
 
+  $("#landingPgLoginBtn").on("click", () => {
+    $("#landingPage").hide()
+    $("#loginScreen").fadeIn()
+  })
+
+  $("#landingPgRegisterBtn").on("click", () => {
+    $("#landingPage").hide()
+    $("#signupScreen").fadeIn()
+  })
+
+  $("#tenantScreenBackBtn").on("click", () => {
+    $("#tenantScreen").hide()
+    $("#propertiesScreen").fadeIn()
+  })
+  //we want to hide the step to add tenant bankAccount information. We will add this on each tenants Individual page.
+
+  $("#stepThreeBtn").on("click", () => {
+
+  })
+
+  $("#gettingStarted").on("click", () => {
+    $("#propertiesScreen").hide()
+    $("#setupPage").fadeIn()
+  })
+
+  $("#setupPageNavBackBtn").on("click", () => {
+    $("#setupPage").hide()
+    $("#propertiesScreen").fadeIn()
+  })
+
+
   // Logic for registration, login, logout.
   let signUpForm = $("#signupForm")
   let signInForm = $("#signInForm")
@@ -31,13 +64,13 @@ $(() => {
 
   let toggleSigninBtn = $("#toLogin")
   toggleSigninBtn.on("click", () => {
-    $("#signupScreen").fadeOut()
+    $("#signupScreen").hide()
     $("#loginScreen").fadeIn()
   })
 
   let toggleToRegister = $("#toRegister")
   toggleToRegister.on("click", () => {
-    $("#loginScreen").fadeOut()
+    $("#loginScreen").hide()
     $("#signupScreen").fadeIn()
   })
 

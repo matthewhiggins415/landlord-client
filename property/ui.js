@@ -58,7 +58,7 @@ const createPropSuccess = (responseData) => {
         div.setAttribute('id', 'propertyFromList')
         div.classList.add("property")
         let p = document.createElement("p")
-
+        p.classList.add("propAddress")
         propertiesList.append(div)
         div.append(`${address}`, p)
         div.append(btn)

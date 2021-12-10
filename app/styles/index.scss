@@ -7,12 +7,206 @@
   box-sizing: border-box;
 }
 
+// Landing Page -------
+.landingPage {
+ display: flex;
+ flex-direction: column;
+ width: 100vw;
+ height: 100vh;
+}
+
+.landingPageNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+}
+
+.landingPgBtn {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.landingPgBtn:hover {
+  background-color: lightslategrey;
+  color: white;
+
+}
+
+.landingPgCallToAction {
+  width: 70%;
+  height: 500px;
+  margin: 25px auto;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: darkblue;
+}
+
+.landingPgCallToAction h2 {
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+// Setup Page -----
+.setupPage {
+ display: flex;
+ flex-direction: column;
+ width: 100vw;
+ height: 100vh;
+}
+
+.setupPageNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin: 10px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(173, 250, 243);
+}
+
+.setupPageNav h2 {
+  text-align: center;
+}
+
+.setupPgContainer{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.setupPgStepsOne {
+  background-color: rgb(252, 205, 205);
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.setupPgStepsTwo {
+  background-color: rgb(205, 252, 212);
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.setupPgStepsThree {
+  background-color: rgb(210, 209, 245);
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+}
+
+.stepOne {
+  background-color: rgb(255, 163, 163);
+  width: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.stepOneBtn {
+  border: 3px solid rgb(255, 163, 163);
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  transition: 150ms ease-in-out;
+  color: rgb(255, 163, 163);
+  transition: 150ms ease-in-out;
+}
+
+.stepOneBtn:hover {
+  color: white;
+  background-color: rgb(255, 163, 163);
+}
+
+.stepTwo {
+  background-color: rgb(93, 210, 61);
+  width: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.stepTwoBtn {
+  border: 3px solid rgb(93, 210, 61);
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  transition: 150ms ease-in-out;
+  color: rgb(93, 210, 61);
+  transition: 150ms ease-in-out;
+}
+
+.stepTwoBtn:hover {
+  background-color: rgb(93, 210, 61);
+  color: white;
+}
+
+.stepThree {
+  background-color: rgb(117, 147, 247);
+  width: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.stepThreeBtn {
+  border: 3px solid rgb(117, 147, 247);
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  transition: 150ms ease-in-out;
+  color: rgb(117, 147, 247);
+  transition: 150ms ease-in-out;
+}
+
+.stepThreeBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+
+
 /* -- Message -- */
 .message {
-  background-color: white;
-  border: 1px solid darkblue;
-  box-shadow: 3px 3px 3px darkblue;
-  color: darkblue;
+  background-color: gold;
+  border: none;
+  color: black;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,84 +223,87 @@
 .signup {
   width: 100vw;
   height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: space-evenly;
 }
 
 .switchToLogin {
-  background-color: white;
-  border: 1px solid darkblue;
-  border-radius: 5px;
-  position: absolute;
-  width: 10%;
-  height: 30px;
-  margin: 0 auto;
-  top: 10vh;
-  left: 20%;
+  background-color: rgb(173, 250, 243);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 30px;
   transition: 150ms;
 }
 .switchToLogin:hover {
-  border: 1px solid darkblue;
-  box-shadow: 2px 2px 2px darkblue;
-  transform: scale(1.2);
-}
-
-.signupScreenMessage {
-  display: none;
-  position: relative;
-  width: auto;
-  height: 50px;
-  left: 20px;
-  top: 20px;
-  background-color: lightseagreen;
+  background-color: hsl(300, 79%, 39%);
+  color: white;
 }
 
 .signup-form {
-  position: absolute;
-  left: 25vw;
-  top: 25vh;
-  border: 1px solid darkblue;
-  box-shadow: 2px 2px 2px darkblue;
+  background-color: tomato;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0 auto;
-  height: 50%;
-  width: 50%;
+  margin-top: 50px;
+  height: auto;
+  width: 30%;
 }
 
 .signup-form h2 {
   text-align: center;
+  color: white;
   letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(252, 151, 133);
+  width: 80%;
+  margin: 15px auto;
 }
 
 .signup-input{
+  color:rgb(252, 151, 133);
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
+  background-color: tomato;
+  border: none;
   padding: 10px;
-  border-radius: 10px;
   outline: none;
-  border: 1px solid darkblue;
+  transition: 150ms ease-in-out;
+}
+
+.signup-input:focus {
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(252, 151, 133);
+}
+
+.signup-input::placeholder {
+  color: white;
+}
+
+.signup-input:hover {
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(252, 151, 133);
 }
 
 .signup-btn{
   width: 80%;
+  color: white;
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
+  letter-spacing: 2px;
   outline: none;
-  border: 1px solid black;
-  background-color: white;
-  transition: 200ms ease-in;
+  border: none;
+  background-color: tomato;
+  transition: 150ms ease-in-out;
 }
 
 .signup-btn:hover {
-  background-color: darkblue;
-  border: 1px solid darkblue;
+  background-color: rgb(252, 151, 133);
   color: white;
 }
 
@@ -116,64 +313,63 @@
 .loginScreen {
   width: 100vw;
   height: 100vh;
-  display: none;
-}
-
-.signInScreenMessage {
-  display: none;
-  position: relative;
-  width: auto;
-  height: 50px;
-  left: 20px;
-  top: 20px;
-  background-color: lightseagreen;
 }
 
 .signin-form {
-  height: 50%;
-  width: 50%;
-  display: flex;
-  position: absolute;
-  left: 25vw;
-  top: 25vh;
-  border: 1px solid darkblue;
-  box-shadow: 2px 2px 2px darkblue;
+  background-color: rgb(45, 184, 17);
   border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 30%;
 }
 
 .signin-form h2 {
+  background-color: rgb(146, 249, 161);
+  color: white;
+  width: 80%;
+  padding: 10px;
+  margin: 15px auto;
+  border-radius: 10px;
   text-align: center;
   letter-spacing: 2px;
 }
 
 .signin-input{
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
+  background-color: rgb(45, 184, 17);
+  border: none;
   padding: 10px;
-  border-radius: 10px;
   outline: none;
-  border: 1px solid darkblue;
+  border-bottom: 1px solid rgb(146, 249, 161);
+  transition: 150ms ease-in-out;
 }
+
+.signin-input:focus {
+  border-radius: 10px;
+  background-color: rgb(146, 249, 161);
+}
+
 
 .signin-btn{
   width: 80%;
+  color: white;
   margin: 0 auto;
   padding: 10px;
   border-radius: 10px;
   outline: none;
-  border: 1px solid black;
-  background-color: white;
-  transition: 200ms ease-in;
+  border: none;
+  background-color: rgb(45, 184, 17);
+  transition: 150ms ease-in-out;
 }
 
 .signin-btn:hover {
-  background-color: darkblue;
-  border: 1px solid darkblue;
+  background-color: rgb(146, 249, 161);
   color: white;
 }
 
@@ -187,89 +383,131 @@
   flex-direction: column;
 }
 
-.propertyTop {
-  width: 100%;
-  height: 10%;
+.propertyScreenNav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: end;
-  border-bottom: 1px solid lightgray;
+  width: auto;
+  margin: 10px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(173, 250, 243);
+}
+
+.logo {
+  width: 30%;
+  text-align: center;
+}
+
+.propertyScreenNavRight {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navBtn {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(173, 250, 243);
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.navBtn:hover {
+  background-color: lightskyblue;
+  color: white;
 }
 
 .propertyTop h2 {
   margin-right: 20px;
 }
 
-.propertyMessages {
-  width: 100%;
-  height: 15%;}
+.propertyListContainer {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgb(206, 242, 250);
+}
+
 
 .propertyFunctionality{
-  width: 100%;
-  height: 10%;
+  width: auto;
+  background-color: rgb(152, 232, 250);
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid lightgray;
 }
 
 .propertyFunctionality h3 {
-  margin-left: 20px;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .propertyAddBtn {
   margin-right: 20px;
+  background-color: rgb(152, 232, 250);
   padding: 10px;
+  border: none;
   border-radius: 10px;
-  border: 1px solid darkblue;
-  background-color: white;
   cursor: pointer;
   transition: 150ms ease-in;
 }
 
 .propertyAddBtn:hover {
-  background-color: darkblue;
-  color: white;
+  background-color: #e9fcff;
+  color: black;
 }
 
 .propertyGrid {
-  width: auto;
-  height: 60%;
-  margin: 25px 25px 25px 25px;
+  min-height: 500px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(152, 232, 250);
 }
 
 .property {
   border-radius: 10px;
   height: auto;
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin: 3px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid lightgray;
   transition: 150ms ease;
 }
 
 .property:hover {
-  border: 1px solid darkblue;
+  background-color: rgb(206, 242, 250);
 }
 
 .propBtn {
-  border: 1px solid lightgray;
-  color: lightgray;
-  background-color: white;
-  padding: 4px;
+  color: black;
+  background-color: transparent;
+  padding: 6px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: 150ms ease-in-out;
 }
 
 .propBtn:hover {
-  color: darkblue;
-  border: 1px solid darkblue;
+  background-color: #e9fcff;
 }
 
 .bottom {
@@ -282,15 +520,15 @@
 
 .logoutBtn {
   padding: 10px;
-  background-color: white;
-  border: 1px solid darkblue;
+  background-color: rgb(173, 250, 243);
+  border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: 150ms ease-in;
 }
 
 .logoutBtn:hover {
-  background-color: darkblue;
+  background-color: rgb(238, 57, 54);
   color: white;
 }
 
@@ -301,19 +539,9 @@
   width: 100vw;
 }
 
-.propertyFormScreenTop {
-  height: 10%;
-  width: 100%;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid lightgray;
-}
-
 .propertyFormScreenBack {
-  background-color: white;
-  border: 1px solid darkblue;
+  background-color: rgb(173, 250, 243);
+  border: none;
   margin-left: 20px;
   padding: 10px;
   border-radius: 10px;
@@ -321,8 +549,8 @@
 }
 
 .propertyFormScreenBack:hover {
-  color: white;
-  background-color: darkblue;
+  color: black;
+  background-color: rgb(245, 145, 245);
 }
 
 .propertyFormScreenTop h2 {
@@ -330,47 +558,59 @@
 }
 
 .propertyForm {
-  border: 1px solid darkblue;
-  box-shadow: 3px 3px 3px darkblue;
+  background-color: gold;
   border-radius: 20px;
-  width: 80%;
+  width: 50%;
   margin: 20px auto;
   height: auto;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .propertyForm h2 {
+  background-color: lightyellow;
+  border-radius: 10px;
+  width: 80%;
+  padding: 10px;
   text-align: center;
   letter-spacing: 2px;
-  margin: 15px auto;
+  margin: 20px auto;
 }
 
 .propertyFormInput {
   width: 80%;
   padding: 10px;
-  border: 1px solid black;
+  background-color: gold;
+  color: black;
+  border: none;
   outline: none;
   margin: 5px auto;
+  transition: 150ms ease-in-out;
+  border-bottom: 1px solid lightyellow;
+}
+
+.propertyFormInput:focus {
+  background-color: lightyellow;
   border-radius: 10px;
+  border-bottom: none;
 }
 
 .propertyFormBtn {
-  width: 30%;
-  margin: 10px auto;
-  padding: 15px;
-  background-color: white;
-  border: 1px solid darkblue;
-  background-color: white;
-  transition: 150ms ease-in;
+  background-color: transparent;
   border-radius: 10px;
-  cursor: pointer;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
 }
 
 .propertyFormBtn:hover {
-  background-color: darkblue;
-  color: white;
+  background-color: lightyellow;
 }
 
 
@@ -378,22 +618,83 @@
 
 .tenantScreen {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
 
-.tenantScreenTop {
-  width: 100%;
-  height: 10%;
+.tenantScreenBodyTop {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid lightgray;
+  width: 100%;
+  background-color: rgb(206, 242, 250);
+  border-radius: 10px;
 }
 
-.tenantScreenTop h2 {
-  margin-right: 20px;
+.propertyPaymentsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(152, 232, 250);
+  margin: 5px 10px 10px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 500px;
+}
+
+.propertyPaymentsContainerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.propertyPaymentsContainerNav h4 {
+  padding: 10px;
+}
+
+.paymentsList {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.payment {
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+  padding: 5px;
+  margin: 3px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 150ms ease;
+}
+
+.payment p {
+  padding: 10px;
+}
+
+.payment:hover {
+  background-color: rgb(206, 242, 250);
+}
+
+.paymentBtnContainer {
+  display: flex;
+}
+
+.paymentBtns {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.paymentBtns:hover {
+  background-color: #e9fcff;
 }
 
 .tenantScreenBackBtn {
@@ -411,24 +712,34 @@
 }
 
 .tenantScreenBody {
-  width: 100%;
-  height: 100%;
+  background-color: rgb(206, 242, 250);
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
 .propDetailsContainer{
+  background-color: rgb(152, 232, 250);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 40%;
-  margin: 5vh auto;
+  width: 50%;
+  min-width: 40%;
+  margin: 10px;
   min-height: 50%;
-  height: 50%;
+  height: auto;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid darkblue;
+}
+
+.propDetailsh4 {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
 }
 
 .propertyDetailsInfo {
@@ -449,11 +760,19 @@
   justify-content: space-evenly;
 }
 
-.propertyEditForm input {
-  background-color: white;
-  border: 1px solid darkblue;
-  border-radius: 5px;
-  padding: 8px;
+.propertyEditFormInput {
+  background-color: rgb(152, 232, 250);
+  padding: 10px;
+  margin: 5px;
+  transition: 150ms ease-in-out;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(206, 242, 250);
+}
+
+.propertyEditFormInput:focus {
+  background-color: rgb(206, 242, 250);
+  border-radius: 10px;
 }
 
 .confirmDeleteContainer {
@@ -469,20 +788,20 @@
 }
 
 .propDelete {
-  border: 1px solid darkblue;
   border-radius: 5px;
-  background-color: white;
-  color: darkblue;
+  background-color: rgb(152, 232, 250);
+  color: black;
   cursor: pointer;
-  transition: 250ms ease-in;
+  transition: 150ms ease-in;
   width: 100%;
   margin: 2px auto;
-  padding: 5px
+  padding: 10px;
+  border: none;
 }
 
 .propDelete:hover {
-  background-color: darkblue;
-  color: white;
+  background-color: rgb(206, 242, 250);
+  color: black;
 }
 
 .yesDeleteProp {
@@ -515,72 +834,74 @@
 }
 
 .tenantContainer {
-  width: 40%;
-  height: 50%;
-  margin: 5vh auto;
+  background-color: rgb(152, 232, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  min-width: 40%;
+  margin: 10px;
+  min-height: 50%;
+  height: auto;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid darkblue;
 }
 
-.tenantFunctionality{
+.tenantContainerH4 {
   width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.tenantFunctionality h3 {
-  margin-left: 20px;
+  padding: 10px;
+  text-align: center;
 }
 
 .tenantAddBtn {
-  border: 1px solid darkblue;
   border-radius: 5px;
-  background-color: white;
-  color: darkblue;
+  background-color: rgb(152, 232, 250);
+  color: black;
   cursor: pointer;
-  transition: 250ms ease-in;
+  transition: 150ms ease-in;
   width: 100%;
   margin: 2px auto;
-  padding: 5px
+  padding: 10px;
+  border: none;
 }
 
 .tenantAddBtn:hover {
-  background-color: darkblue;
-  color: white;
+  background-color: rgb(206, 242, 250);
+  color: black;
 }
 
 .tenantGrid {
   width: 100%;
-  height: 60%;
+  height: auto;
+  min-height: 60%;
 }
 
 .tenant {
-  height: fit-content;
+  height: auto;
   padding: 10px;
   width: 100%;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   transition: 150ms ease-in-out;
 }
 
 .tenant:hover {
-  background-color: darkblue;
-  color: white;
+  background-color: rgb(206, 242, 250);
 }
 
 .tenantDetailsBtn {
-  border: 1px solid darkblue;
-  background-color: white;
+  border: none;
+  background-color: transparent;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.tenantDetailsBtn:hover {
+  background-color: #e9fcff;
 }
 
 
