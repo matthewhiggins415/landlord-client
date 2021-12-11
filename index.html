@@ -134,7 +134,6 @@
           <div class="propertyScreenNavRight">
             <button class="navBtn" id="tenantScreenServicesBtn">Services</button>
             <button class="navBtn" id="TenantScreenNavgettingStarted">Getting Started</button>
-            <button class="navBtn" id="TenantScreenNavProfileBtn">Profile</button>
             <button class="logoutBtn" id="TenantScreenNavlogoutBtn">Logout</button>
           </div>
         </div>
@@ -230,40 +229,70 @@
       </section>
 
       <section class="tenantInfoScreen" id="tenantInfoScreen">
-        <div class="tenantInfoTop">
-          <button id="tenantInfoScreenBackBtn">Back</button>
+        <div class="propertyScreenNav">
+          <button id="tenantInfoScreenBackBtn" class="propertyFormScreenBack">Back</button>
           <h2>easyRent</h2>
         </div>
-
-        <div class="tenantInfoSection">
-          <div class="tenantInformation">
-            <h2>Tenant Info:</h2>
-            <p>name</p>
-            <p>email</p>
-            <p>phone</p>
-            <p>tenantAdresss</p>
-            <p>?Status</p>
-            <p>rentDate</p>
-            <p>rentAmount</p>
+        <div class="tenantScreenBody">
+          <div class="tenantInfoSection">
+            <div class="tenantInformation">
+              <h2>Tenant Info:</h2>
+              <p>name</p>
+              <p>email</p>
+              <p>phone</p>
+              <p>tenantAdresss</p>
+              <p>?Status</p>
+              <p>rentDate</p>
+              <p>rentAmount</p>
+            </div>
+            <div class="tenantFunctionality">
+              <button class="tenantFuncButton">Add Payment Method</button>
+              <button class="tenantFuncButton">Credit Check</button>
+            </div>
           </div>
-
-          <div class="tenantInfoMessages">
-            <p>Random messages</p>
-          </div>
-        </div>
-
-        <div class="tenantInfoFunctionality">
-          <h2>Tenant Info</h2>
-          <button>Add Payment Method</button>
-        </div>
-        <div class="tenantInfoPaymentHistory">
-          <h4>Payment History</h4>
-          <div class="paymentHistoryData">
-            <p>data data data</p>
+          <div class="tenantPaymentsContainer">
+            <div class="tenantInfoFunctionality">
+              <h2>Tenant Payments</h2>
+            </div>
+            <div class="tenantInfoPaymentHistory">
+              
+            </div>
           </div>
         </div>
-        <div class="tenantInfoBottom"></div>
+      </section>
 
+
+      <section class="profileScreen" id="profileScreen">
+        <nav class="propertyScreenNav">
+          <button class="propertyFormScreenBack" id="profileBackBtn">back</button>
+          <h2>easyRent</h2>
+        </nav>
+        <div class="profileBodyContainer">
+          <div class="profileBodyNav">
+            <button class="profileBodyNavBtn">Profile</button>
+            <button class="profileBodyNavBtn">Edit Profile</button>
+            <button class="profileBodyNavBtn">Plan</button>
+            <button class="profileBodyNavBtn" id="profileNavPasswordsBtn">Passwords</button>
+            <button class="profileBodyNavBtn">Support</button>
+          </div>
+          <div class="profileViewContainer">
+            <div class="profilePasswordsView" id="profilePasswordsView">
+              <h2>Create a new password</h2>
+              <form class="changePasswordForm">
+                <input class="changePasswordFormInput" placeholder="old password" required/>
+                <input class="changePasswordFormInput" placeholder="new password" required/>
+                <input class="changePasswordFormInput" placeholder="confirm new password" required/>
+                <button class="changePasswordFormBtn" type="submit">Submit</button>
+              </form>
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
       </section>
     </body>
 </html>

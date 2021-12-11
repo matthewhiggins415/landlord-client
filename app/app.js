@@ -152,6 +152,26 @@ $(() => {
     $("#tenantScreen").fadeIn()
   })
 
+  //Navigate to Profile Screen 
+  $("#PropScreenNavProfileBtn").on("click", () => {
+    $("#propertiesScreen").hide()
+    $("#profileScreen").fadeIn()
+  })
+
+  //Navigate Back from Profile Screen
+  $("#profileBackBtn").on("click", () => {
+    $("#profileScreen").hide()
+    $("#propertiesScreen").fadeIn()
+  })
+
+  //We got multiple views within profile screen, hide em.
+  $("#profilePasswordsView").hide()
+
+  //then make those views appear when clicked in nav
+  $("#profileNavPasswordsBtn").on("click", () => {
+    $("#profilePasswordsView").fadeIn()
+  })
+
   //EDIT PROPERTY FUNCTIONALITY
   $("#propEditBtn").on("click", () => {
     $("#propDetailsh4").hide()
