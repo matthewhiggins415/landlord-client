@@ -14,8 +14,9 @@ This project is a platform for landlords and tenants to exchange money automatic
 4. Organize your tenants
 
 ### Wireframes:
-![General Wireframe](https://imgur.com/NhS7dIb)
-![Profile Page Wireframe](https://imgur.com/Q3tt4AT)
+![General Flow Wireframe](https://imgur.com/NhS7dIb)
+![Profile View Wireframe](https://imgur.com/Q3tt4AT)
+![Tenant Details View Wireframe](https://imgur.com/bz0F98T)
 
 
 ### Landlord User Story:
