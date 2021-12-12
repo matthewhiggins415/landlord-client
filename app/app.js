@@ -15,6 +15,8 @@ $(() => {
   $("#setupPage").hide()
   $("#signupScreen").hide()
   $("#loginScreen").hide()
+  $("#propertyScreen").hide()
+  $("#profileScreen").hide()
   $("#propertiesScreen").hide()
   $("#propertyFormScreen").hide()
   $("#tenantScreen").hide()
@@ -152,7 +154,7 @@ $(() => {
     $("#tenantScreen").fadeIn()
   })
 
-  //Navigate to Profile Screen 
+  //Navigate to Profile Screen
   $("#PropScreenNavProfileBtn").on("click", () => {
     $("#propertiesScreen").hide()
     $("#profileScreen").fadeIn()
