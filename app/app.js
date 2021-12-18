@@ -6,6 +6,7 @@
 
 const authEvents = require("../auth/events")
 const propEvents = require("../property/events")
+const tenantEvents = require('../tenant/events')
 const store = require("./store")
 // const navEvents = require('../navigation/navigation')
 
@@ -207,6 +208,10 @@ $(() => {
     $("#propertyEditFormContainer").hide()
     $("#propertyDetailsInfoTenantScreen").fadeIn()
   })
+
+  //This is for creating the tenant
+  let createTenantForm = $("#tenantForm")
+  createTenantForm.on("submit", tenantEvents.onCreateTenant)
 
 
 

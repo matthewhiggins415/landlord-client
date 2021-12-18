@@ -180,12 +180,8 @@
             </div>
             <div class="tenantContainer">
               <h4 class="tenantContainerH4">Tenants</h4>
-              <div class="tenantGrid">
-                <div class="tenant">
-                  <p>Name</p>
-                  <p>Tenant Status</p>
-                  <button class="tenantDetailsBtn" id="tenantDetailsBtn">Details</button>
-                </div>
+              <div class="tenantGrid" id="tenantGrid">
+
               </div>
               <button class="tenantAddBtn" id="tenantAddBtn">Add Tenant</button>
             </div>
@@ -203,7 +199,7 @@
                 <p>DATE</p>
                 <p>AMOUNT</p>
                 <p>NAME</p>
-                <button class="tenantDetailsBtn">DETAILS</button>
+                <button class="tenantDetailsScreenBtn">DETAILS</button>
               </div>
             </div>
           </div>
@@ -215,16 +211,15 @@
           <button class="propertyFormScreenBack" id="tenantFormScreenBackBtn">Back</button>
           <h2>easyRent</h2>
         </div>
-        <form class="propertyForm">
+        <form id="tenantForm" class="propertyForm">
           <h2>Create Tenant</h2>
-          <input class="propertyFormInput" placeholder="Tenant First Name" required/>
-          <input class="propertyFormInput" placeholder="Tenant Last Name" required/>
-          <input class="propertyFormInput" placeholder="Tenant Email" required/>
-          <input class="propertyFormInput" placeholder="Tenant Phone" required/>
-          <input class="propertyFormInput" placeholder="Tenant Monthly Rent Amount" required/>
-          <input class="propertyFormInput" placeholder="Confirm Tenant Monthly Rent Amount" required/>
-          <input class="propertyFormInput" placeholder="Day of Month Rent Due" required/>
-          <button class="propertyFormBtn">Complete</button>
+          <input class="propertyFormInput" name="firstName" type="text" placeholder="Tenant First Name" required/>
+          <input class="propertyFormInput" name="lastName" type="text" placeholder="Tenant Last Name" required/>
+          <input class="propertyFormInput" name="email" type="text" placeholder="Tenant Email" required/>
+          <input class="propertyFormInput" name="phone" type="text" placeholder="Tenant Phone" required/>
+          <input class="propertyFormInput" name="rentAmount" type="number" placeholder="Tenant Monthly Rent Amount" required/>
+          <input class="propertyFormInput" name="rentDate" type="number" placeholder="Day of Month Rent Due" required/>
+          <button class="propertyFormBtn" type="submit" id="createTenantFormBtn">Complete</button>
         </form>
       </section>
 
@@ -255,7 +250,7 @@
               <h2>Tenant Payments</h2>
             </div>
             <div class="tenantInfoPaymentHistory">
-              
+
             </div>
           </div>
         </div>

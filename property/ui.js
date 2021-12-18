@@ -2,10 +2,13 @@ const store = require('../app/store')
 const propEvents = require('./events')
 const api = require("./api")
 const { property } = require('../app/store')
+const tenantEvents = require('../tenant/events')
 
 const onGetPropertyDetails = (id) => {
   api.getASingleProperty(id).then(getAPropertySuccess).catch(getAPropertyFailure)
 }
+
+
 //Remove all children of an element
 const removeAllChildNodes = (parent) => {
   while (parent.firstChild) {
@@ -52,7 +55,6 @@ const createPropSuccess = (responseData) => {
         btn.addEventListener("click", () => {
           onGetPropertyDetails(btn.name)
         })
-
         let address = property[key]
         let div = document.createElement("div")
         div.setAttribute('id', 'propertyFromList')
@@ -81,6 +83,11 @@ const getPropertiesSuccess = (responseData) => {
   let propertiesList = document.getElementById("propertiesList")
   removeAllChildNodes(propertiesList)
 
+  const fireEvents = (propId) => {
+    onGetPropertyDetails(propId)
+    tenantEvents.onReadTenants(propId)
+  }
+
   properties.forEach(property => {
     for (let key in property) {
       if (key === 'address') {
@@ -92,9 +99,9 @@ const getPropertiesSuccess = (responseData) => {
         btn.type = "button"
         btn.name = property._id
         btn.addEventListener("click", () => {
-          onGetPropertyDetails(btn.name)
-          // propEvents.onGetPropertyDetails(btn.name)
+          fireEvents(btn.name)
         })
+
 
         let address = property[key]
         let div = document.createElement("div")

@@ -5,7 +5,9 @@ const store = {
     token: null
   },
   properties: [],
-  property: null
+  property: null,
+  tenants: [],
+  tenant: null
 }
 
 module.exports = store
