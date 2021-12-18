@@ -228,22 +228,30 @@
           <button id="tenantInfoScreenBackBtn" class="propertyFormScreenBack">Back</button>
           <h2>easyRent</h2>
         </div>
+
         <div class="tenantScreenBody">
           <div class="tenantInfoSection">
-            <div class="tenantInformation">
-              <h2>Tenant Info:</h2>
-              <p>name</p>
-              <p>email</p>
-              <p>phone</p>
-              <p>tenantAdresss</p>
-              <p>?Status</p>
-              <p>rentDate</p>
-              <p>rentAmount</p>
+
+            <div class="tenantInfoLeftContainer" id="tenantInfoLeftContainer">
+              <div class="tenantInformation" id="tenantInformation">
+              </div>
+              <div class="tenantInformationBtnContainer">
+                <button class="tenantDeleteBtn" id="tenantDeleteBtn">Delete</button>
+                <button class="tenantEditBtn">Edit</button>
+              </div>
             </div>
+
+            <div class="confirmTenantDeleteContainer" id="confirmTenantDeleteContainer">
+              <h4>Confirm Deletion</h4>
+              <button id="yesDeleteTenant" class="yesDeleteTenant">Yes</button>
+              <button id="noDeleteTenant" class="noDeleteTenant">No</button>
+            </div>
+
             <div class="tenantFunctionality">
               <button class="tenantFuncButton">Add Payment Method</button>
               <button class="tenantFuncButton">Credit Check</button>
             </div>
+
           </div>
           <div class="tenantPaymentsContainer">
             <div class="tenantInfoFunctionality">

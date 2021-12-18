@@ -1033,11 +1033,42 @@
 }
 
 .tenantInformation {
+  display: flex;
+  flex-direction: column;
   min-width: 30%;
-  min-height: 350px;
+  min-height: 300px;
   margin: 10px 5px 0px 10px;
   padding: 20px;
   border-radius: 10px;
+  background-color: rgb(152, 232, 250);
+}
+
+.tenantInfoLeftContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenantInformationBtnContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.tenantDeleteBtn {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(152, 232, 250);
+}
+
+.tenantEditBtn {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
   background-color: rgb(152, 232, 250);
 }
 

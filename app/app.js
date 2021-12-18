@@ -28,6 +28,7 @@ $(() => {
   $("#propEditCancel").hide()
   $("#propertyEditFormContainer").hide()
   $("#alertMessage").hide()
+  $("#confirmTenantDeleteContainer").hide()
 
   $("#landingPgLoginBtn").on("click", () => {
     $("#landingPage").hide()
@@ -214,5 +215,14 @@ $(() => {
   createTenantForm.on("submit", tenantEvents.onCreateTenant)
 
 
+  $("#tenantDeleteBtn").on("click", () => {
+    $("#tenantInfoLeftContainer").hide()
+    $("#confirmTenantDeleteContainer").fadeIn()
+  })
+
+  $("#noDeleteTenant").on("click", () => {
+    $("#confirmTenantDeleteContainer").hide()
+    $("#tenantInfoLeftContainer").fadeIn()
+  })
 
 })

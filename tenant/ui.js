@@ -82,11 +82,28 @@ const onGetTenantsFailure = (responseData) => {
 //Get Tenant
 const onGetTenantSuccess = (responseData) => {
   console.log(`Successful request for tenant with id: `, responseData.tenant)
+  $("#tenantScreen").hide()
+  $("#tenantInfoScreen").fadeIn()
 
+  let tenant = responseData.tenant
+  let tenantDiv = document.getElementById("tenantInformation")
+  removeAllChildNodes(tenantDiv)
+
+  let p1 = document.createElement("p")
+  let p2 = document.createElement("p")
+  let p3 = document.createElement("p")
+  let p4 = document.createElement("p")
+  let p5 = document.createElement("p")
+
+  tenantDiv.append(`${tenant.firstName} ${tenant.lastName}`, p1)
+  tenantDiv.append(`${tenant.phone}`, p2)
+  tenantDiv.append(`${tenant.email}`, p3)
+  tenantDiv.append(`Rent Amount: $${tenant.rentAmount}`, p4)
+  tenantDiv.append(`Rent Date: ${tenant.rentDate}`, p5)
 }
 
 const onGetTenantFailure = (responseData) => {
-  console.log(`Tenant request fucked up`, responseData)
+  console.log(responseData)
 }
 
 //Update Tenant
