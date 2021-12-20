@@ -21,25 +21,27 @@
 
 
       <section class="landingPage" id="landingPage">
-        <nav class="landingPageNav">
+        <nav class="propertyScreenNav">
           <h2>easyRent</h2>
-          <button class="landingPgBtn" id="landingPgLoginBtn">login</button>
+          <button class="landingPgBtnLogin" id="landingPgLoginBtn">login</button>
         </nav>
-        <div class="landingPgCallToAction">
-          <h2>Automatically Collect Payments from your Tenants</h2>
-          <button class="landingPgBtn"
+        <div class="landingPgCallToActionTop">
+          <div class="landingScreenTopLeft">
+            <h2>Automatically Collect Payments from your Tenants</h2>
+            <button class="landingPgBtn"
           id="landingPgRegisterBtn">Register</button>
-        </div>
-        <div class="landingPgCallToAction">
-          <h2>Easily manage properties and tenants</h2>
+          </div>
+          <div class="landingScreenTopRight">
+
+          </div>
         </div>
       </section>
 
       <section class="setupPage" id="setupPage">
-        <nav class="setupPageNav">
-          <button class="landingPgBtn" id="setupPageNavBackBtn">Back</button>
+        <nav class="propertyScreenNav">
+          <button class="navBtn" id="setupPageNavBackBtn">Back</button>
           <h2>easyRent</h2>
-          <button class="landingPgBtn">logout</button>
+          <button class="navBtn">logout</button>
         </nav>
         <div class="setupPgContainer">
           <div class="setupPgStepsOne">
@@ -66,7 +68,7 @@
       <section class="signup" id="signupScreen">
         <div class="propertyScreenNav">
           <h2 class="logo">easyRent</h2>
-          <button class="switchToLogin" id="toLogin">Login</button>
+          <button class="landingPgBtnLogin" id="toLogin">Login</button>
         </div>
         <form class="signup-form" id="signupForm">
           <h2>Register</h2>
@@ -81,7 +83,7 @@
       <section class="loginScreen" id="loginScreen">
         <div class="propertyScreenNav">
           <h2 class="logo">easyRent</h2>
-          <button class="switchToLogin" id="toRegister">Register</button>
+          <button class="landingPgBtnLogin" id="toRegister">Register</button>
         </div>
         <form class="signup-form" id="signInForm">
           <h2>Login</h2>
@@ -97,14 +99,14 @@
           <div class="propertyScreenNavRight">
             <button class="navBtn" id="gettingStarted">Getting Started</button>
             <button class="navBtn" id="PropScreenNavProfileBtn">Profile</button>
-            <button class="logoutBtn" id="logoutBtn">Logout</button>
+            <button class="navBtn" id="logoutBtn">Logout</button>
           </div>
         </div>
 
         <div class="propertyListContainer">
           <div class="propertyFunctionality">
             <h3>Properties</h3>
-            <button class="propertyAddBtn" id="propertyAddBtn">Add Property</button>
+            <button class="navBtn" id="propertyAddBtn">Add Property</button>
           </div>
           <div class="propertyGrid" id="propertiesList">
 
@@ -114,27 +116,27 @@
 
       <section class="propertyFormScreen" id="propertyFormScreen">
         <div class="propertyScreenNav">
-          <button class="propertyFormScreenBack" id="propertyFormScreenBack">Back</button>
+          <button class="navBtn" id="propertyFormScreenBack">Back</button>
           <h2 class="logo">easyRent</h2>
         </div>
-        <form class="propertyForm" id="addAPropertyForm">
+        <form class="signup-form" id="addAPropertyForm">
           <h2>Create Property</h2>
-          <input class="propertyFormInput" name="address" placeholder="Street Address" type="text" required/>
-          <input class="propertyFormInput" name="numOfUnits" placeholder="Number of Units" type="number" required/>
-          <input class="propertyFormInput" name="totalRent" placeholder="Total Rent" type="number" required/>
-          <input class="propertyFormInput" name="DayRentDue" placeholder="Day of Month Rent is Due" type="number" required/>
-          <button class="propertyFormBtn" id="propertyFormBtn" type="submit">Complete</button>
+          <input class="signup-input" name="address" placeholder="Street Address" type="text" required/>
+          <input class="signup-input" name="numOfUnits" placeholder="Number of Units" type="number" required/>
+          <input class="signup-input" name="totalRent" placeholder="Total Rent" type="number" required/>
+          <input class="signup-input" name="DayRentDue" placeholder="Day of Month Rent is Due" type="number" required/>
+          <button class="signup-btn" id="propertyFormBtn" type="submit">Complete</button>
         </form>
       </section>
 
       <section class="tenantScreen" id="tenantScreen">
         <div class="propertyScreenNav">
-          <button class="propertyFormScreenBack" id="tenantScreenBackBtn">Back</button>
-          <h2 class="logo">easyRent</h2>
+          <button class="navBtn" id="tenantScreenBackBtn">Back</button>
+
           <div class="propertyScreenNavRight">
             <button class="navBtn" id="tenantScreenServicesBtn">Services</button>
             <button class="navBtn" id="TenantScreenNavgettingStarted">Getting Started</button>
-            <button class="logoutBtn" id="TenantScreenNavlogoutBtn">Logout</button>
+            <button class="navBtn" id="TenantScreenNavlogoutBtn">Logout</button>
           </div>
         </div>
         <div class="tenantScreenBody">
@@ -174,9 +176,11 @@
                 <button id="noDeleteProp" class="noDeleteProp">No</button>
               </div>
 
-              <button class="propDelete" type="button" id="propDelete">Delete Property</button>
               <button id="propEditCancel" class="propDelete">Cancel</button>
-              <button id="propEditBtn" class="propDelete">Edit Property</button>
+              <div class="propertyDetailsBtnContainer">
+                <button class="propDelete" type="button" id="propDelete">Delete Property</button>
+                <button id="propEditBtn" class="propDelete">Edit Property</button>
+              </div>
             </div>
             <div class="tenantContainer">
               <h4 class="tenantContainerH4">Tenants</h4>
@@ -208,24 +212,24 @@
 
       <section class="tenantFormScreen" id="tenantFormScreen">
         <div class="propertyScreenNav">
-          <button class="propertyFormScreenBack" id="tenantFormScreenBackBtn">Back</button>
+          <button class="navBtn" id="tenantFormScreenBackBtn">Back</button>
           <h2>easyRent</h2>
         </div>
-        <form id="tenantForm" class="propertyForm">
+        <form id="tenantForm" class="signup-form">
           <h2>Create Tenant</h2>
-          <input class="propertyFormInput" name="firstName" type="text" placeholder="Tenant First Name" required/>
-          <input class="propertyFormInput" name="lastName" type="text" placeholder="Tenant Last Name" required/>
-          <input class="propertyFormInput" name="email" type="text" placeholder="Tenant Email" required/>
-          <input class="propertyFormInput" name="phone" type="text" placeholder="Tenant Phone" required/>
-          <input class="propertyFormInput" name="rentAmount" type="number" placeholder="Tenant Monthly Rent Amount" required/>
-          <input class="propertyFormInput" name="rentDate" type="number" placeholder="Day of Month Rent Due" required/>
-          <button class="propertyFormBtn" type="submit" id="createTenantFormBtn">Complete</button>
+          <input class="signup-input" name="firstName" type="text" placeholder="Tenant First Name" required/>
+          <input class="signup-input" name="lastName" type="text" placeholder="Tenant Last Name" required/>
+          <input class="signup-input" name="email" type="text" placeholder="Tenant Email" required/>
+          <input class="signup-input" name="phone" type="text" placeholder="Tenant Phone" required/>
+          <input class="signup-input" name="rentAmount" type="number" placeholder="Tenant Monthly Rent Amount" required/>
+          <input class="signup-input" name="rentDate" type="number" placeholder="Day of Month Rent Due" required/>
+          <button class="signup-btn" type="submit" id="createTenantFormBtn">Complete</button>
         </form>
       </section>
 
       <section class="tenantInfoScreen" id="tenantInfoScreen">
         <div class="propertyScreenNav">
-          <button id="tenantInfoScreenBackBtn" class="propertyFormScreenBack">Back</button>
+          <button id="tenantInfoScreenBackBtn" class="navBtn">Back</button>
           <h2>easyRent</h2>
         </div>
 
@@ -267,7 +271,7 @@
 
       <section class="profileScreen" id="profileScreen">
         <nav class="propertyScreenNav">
-          <button class="propertyFormScreenBack" id="profileBackBtn">back</button>
+          <button class="navBtn" id="profileBackBtn">back</button>
           <h2>easyRent</h2>
         </nav>
         <div class="profileBodyContainer">
