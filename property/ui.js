@@ -91,8 +91,6 @@ const getPropertiesSuccess = (responseData) => {
   properties.forEach(property => {
     for (let key in property) {
       if (key === 'address') {
-        let id = property._id
-
         let btn = document.createElement("button")
         btn.classList.add("propBtn")
         btn.innerHTML = "details"

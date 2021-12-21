@@ -538,7 +538,7 @@
   display: flex;
   flex-direction: column;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  margin: 5px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
   padding: 20px;
   border-radius: 10px;
   min-height: 500px;
@@ -573,7 +573,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  transition: 150ms ease;
+  transition: 150ms ease-in-out;
 }
 
 .payment p {
@@ -581,7 +581,7 @@
 }
 
 .payment:hover {
-  background-color: rgb(206, 242, 250);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .paymentBtnContainer {
@@ -595,10 +595,12 @@
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  transition: 150ms ease-in-out;
 }
 
 .paymentBtns:hover {
-  background-color: #e9fcff;
+  background-color: rgb(117, 147, 247);
+  color: white;
 }
 
 .tenantScreenBackBtn {
@@ -607,11 +609,11 @@
   border: 1px solid black;
   background-color: white;
   border-radius: 10px;
+  transition: 150ms ease-in-out;
 }
 
 .tenantScreenBackBtn:hover {
-  border: 1px solid darkblue;
-  background-color: darkblue;
+  background-color: rgb(117, 147, 247);
   color: white;
 }
 
@@ -632,7 +634,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 50%;
-  margin: 10px;
+  margin: 10px 5px 5px 10px;
   height: fit-content;
   padding: 20px;
   border-radius: 10px;
@@ -818,7 +820,8 @@
 }
 
 .tenantBtn:hover {
-  background-color: #e9fcff;
+  background-color: rgb(117, 147, 247);
+  color: white;
 }
 
 
@@ -937,43 +940,112 @@
 .tenantInformation {
   display: flex;
   flex-direction: column;
-  min-width: 30%;
-  min-height: 300px;
-  margin: 10px 5px 0px 10px;
+  height: auto;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgb(152, 232, 250);
 }
 
 .tenantInfoLeftContainer {
   display: flex;
   flex-direction: column;
   width: 30%;
+  margin: 10px 10px 0px 10px;
+  border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.tenantInformationBtnContainer {
+.confirmTenantDeleteContainer{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.confirmTenantDeleteContainer h4 {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.yesDeleteTenant {
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.yesDeleteTenant:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+
+.noDeleteTenant {
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.noDeleteTenant:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantInformationBtnContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   border-radius: 10px;
 }
 
 .tenantDeleteBtn {
   border-radius: 10px;
-  margin: 10px;
+  margin: 0px 5px 5px 5px;
   padding: 10px;
   border: none;
   outline: none;
-  background-color: rgb(152, 232, 250);
+  background-color: white;
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.tenantDeleteBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
 }
 
 .tenantEditBtn {
-  margin: 10px;
+  margin: 0px 5px 5px 5px;
   border-radius: 10px;
   padding: 10px;
   border: none;
   outline: none;
-  background-color: rgb(152, 232, 250);
+  background-color: white;
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.tenantEditBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
 }
 
 .tenantInformation p {
@@ -1004,13 +1076,13 @@
 
 .tenantFunctionality {
   border-radius: 10px;
-  min-height: 350px;
-  min-width: 45%;
+  height: auto;
+  width: auto;
   padding: 20px;
   margin: 10px 10px 0px 5px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(152, 232, 250);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .tenantFuncButton {
@@ -1024,7 +1096,8 @@
 }
 
 .tenantFuncButton:hover {
-  background-color: rgb(206, 242, 250);
+  background-color: rgb(117, 147, 247);
+  color: white;
 }
 
 .tenantInfoFunctionality button {
@@ -1064,6 +1137,61 @@
   justify-content: center;
 }
 
+// ------------------- Tenant Edit Modal ---------------
+
+.tenantEditModalScreen {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.tenantEditModalContainer {
+  width: 50%;
+  height: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tenantEditModalContainer h4 {
+  width: auto;
+  text-align: center;
+  margin: 10px auto;
+  color: rgb(117, 147, 247);
+}
+
+.tenantModalEditForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.tenantModalBtnContainer {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// profile screen =---------------------------------
+
 .profileScreen {
   width: 100vw;
   height: auto;
@@ -1078,7 +1206,7 @@
   min-height: 500px;
   height: 70vh;
   margin: 10px;
-  background-color: rgb(152, 232, 250);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .profileBodyNav {
@@ -1089,12 +1217,12 @@
   margin: 10px 5px 10px 10px;
   padding: 20px;
   width: 20%;
-  background-color: rgb(206, 242, 250);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
 }
 
 .profileViewContainer {
-  background-color:rgb(206, 242, 250);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 100%;
   border-radius: 10px;
   padding: 20px;
@@ -1119,7 +1247,6 @@
 .profilePasswordsView{
   width: 100%;
   height: 100%;
-  background-color:rgb(152, 232, 250);
   border-radius: 10px;
   padding: 20px;
 }

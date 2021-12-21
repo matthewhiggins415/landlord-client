@@ -241,7 +241,7 @@
               </div>
               <div class="tenantInformationBtnContainer">
                 <button class="tenantDeleteBtn" id="tenantDeleteBtn">Delete</button>
-                <button class="tenantEditBtn">Edit</button>
+                <button class="tenantEditBtn" id="tenantEditBtn">Edit</button>
               </div>
             </div>
 
@@ -266,6 +266,26 @@
             </div>
           </div>
         </div>
+      </section>
+
+
+      <section class="tenantEditModalScreen" id="tenantEditModalScreen">
+        <div class="tenantEditModalContainer">
+          <h4>Edit Tenant</h4>
+          <form class="tenantModalEditForm" id="tenantModalEditForm">
+            <input class="signup-input" name="firstName" type="text" placeholder="Tenant First Name" required/>
+            <input class="signup-input" name="lastName" type="text" placeholder="Tenant Last Name" required/>
+            <input class="signup-input" name="email" type="text" placeholder="Tenant Email" required/>
+            <input class="signup-input" name="phone" type="text" placeholder="Tenant Phone" required/>
+            <input class="signup-input" name="rentAmount" type="number" placeholder="Tenant Monthly Rent Amount" required/>
+            <input class="signup-input" name="rentDate" type="number" placeholder="Day of Month Rent Due" required/>
+            <div class="tenantModalBtnContainer">
+              <button class="signup-btn" type="submit">Update</button>
+              <button class="signup-btn" id="tenantEditModalCancelBtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+
       </section>
 
 

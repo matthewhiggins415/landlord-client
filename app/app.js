@@ -29,6 +29,7 @@ $(() => {
   $("#propertyEditFormContainer").hide()
   $("#alertMessage").hide()
   $("#confirmTenantDeleteContainer").hide()
+  $("#tenantEditModalScreen").hide()
 
   $("#landingPgLoginBtn").on("click", () => {
     $("#landingPage").hide()
@@ -65,6 +66,9 @@ $(() => {
   let signUpForm = $("#signupForm")
   let signInForm = $("#signInForm")
   let logoutBtn = $("#logoutBtn")
+  let tenantEditForm = $("#tenantModalEditForm")
+  let confirmTenantDelete = $("#yesDeleteTenant")
+
 
   let toggleSigninBtn = $("#toLogin")
   toggleSigninBtn.on("click", () => {
@@ -81,6 +85,8 @@ $(() => {
   signUpForm.on("submit", authEvents.onSignUp)
   signInForm.on("submit", authEvents.onSignIn)
   logoutBtn.on("click", authEvents.onSignOut)
+  tenantEditForm.on("submit", tenantEvents.onUpdateTenant)
+  confirmTenantDelete.on("click", tenantEvents.onDestroyTenant)
 
   //Navigate to addPropertyScreen from home
   $("#propertyAddBtn").on("click", () => {
@@ -152,6 +158,7 @@ $(() => {
 
   //Navigate Back
   $("#tenantInfoScreenBackBtn").on("click", () => {
+    store.tenant = null
     $("#tenantInfoScreen").hide()
     $("#tenantScreen").fadeIn()
   })
@@ -225,4 +232,13 @@ $(() => {
     $("#tenantInfoLeftContainer").fadeIn()
   })
 
+  $("#tenantEditBtn").on("click", () => {
+    $("#tenantEditModalScreen").fadeIn()
+  })
+
+  $("#tenantEditModalCancelBtn").on("click", () => {
+    $("#tenantEditModalScreen").fadeOut()
+    let form = document.getElementById("tenantModalEditForm")
+    form.reset()
+  })
 })

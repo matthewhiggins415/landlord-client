@@ -35,12 +35,36 @@ const onReadTenants = (propertyID) => {
 
 //on read tenant moved to tenant ui.js
 
-const onUpdateTenant = () => {
+const onUpdateTenant = (e) => {
+  e.preventDefault()
+  let property = store.property._id
+  let form = e.target
+  let firstName = form.elements["firstName"].value
+  let lastName = form.elements["lastName"].value
+  let email = form.elements["email"].value
+  let phone = form.elements["phone"].value
+  let rentDate = form.elements["rentDate"].value
+  let rentAmount = form.elements["rentAmount"].value
+  let formData = {
+    tenant: {
+      property,
+      firstName,
+      lastName,
+      email,
+      phone,
+      rentDate,
+      rentAmount
+    }
+  }
+  api.updateTenant(formData)
+  .then(ui.onUpdateTenantSuccess)
+  .catch(ui.onUpdateTenantFailure)
 
+  form.reset()
 }
 
 const onDestroyTenant = () => {
-
+  api.deleteTenant().then(ui.onDeleteTenantSuccess).catch(ui.onDeleteTenantFailure)
 }
 
 

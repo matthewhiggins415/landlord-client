@@ -32,13 +32,27 @@ const getTenant = (id) => {
   })
 }
 
-const updateTenant = () => {
-
+const updateTenant = (formData) => {
+  let tenantID = store.tenant._id
+  return $.ajax({
+    url: `${config.apiUrl}/tenant/${tenantID}`,
+    method: "PATCH",
+    data: formData,
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
 }
 
-
 const deleteTenant = () => {
-
+  let id = store.tenant._id
+  return $.ajax({
+    url: `${config.apiUrl}/tenant/${id}`,
+    method: "DELETE",
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
 }
 
 module.exports = {
