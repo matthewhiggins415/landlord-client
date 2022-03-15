@@ -1,6 +1,5 @@
 {
   "name": "landlord-client",
-  "homepage": "https://matthewhiggins415.github.io/landlord-client",
   "version": "0.0.3",
   "private": true,
   "license": {
@@ -11,14 +10,6 @@
     "bootstrap": "^5.0.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.14.3"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.2",
