@@ -13,7 +13,6 @@ const store = require("./store")
 $(() => {
   // your JS code goes here
   $("#landingPage").show()
-  $("#setupPage").hide()
   $("#signupScreen").hide()
   $("#loginScreen").hide()
   $("#propertyScreen").hide()
@@ -30,9 +29,6 @@ $(() => {
   $("#confirmTenantDeleteContainer").hide()
   $("#tenantEditModalScreen").hide()
   $("#propertyEditModalScreen").hide()
-  $("#createStripeAccountBtn").hide()
-  $("#accountOnboardingBtn").hide()
-  $("#editStripeAccountBtn").hide()
 
   $("#landingPgLoginBtn").on("click", () => {
     $("#landingPage").hide()
