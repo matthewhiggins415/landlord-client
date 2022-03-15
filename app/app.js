@@ -52,10 +52,10 @@ $(() => {
   //   $("#createStripeAccountBtn").fadeIn()
   // })
 
-  $("#setupPageNavBackBtn").on("click", () => {
-    $("#setupPage").hide()
-    $("#propertiesScreen").fadeIn()
-  })
+  // $("#setupPageNavBackBtn").on("click", () => {
+  //   $("#setupPage").hide()
+  //   $("#propertiesScreen").fadeIn()
+  // })
 
 
   // Logic for registration, login, logout.
