@@ -46,13 +46,11 @@ $(() => {
     $("#propertiesScreen").fadeIn()
   })
 
-  $("#gettingStarted").on("click", () => {
-    $("#propertiesScreen").hide()
-    $("#setupPage").fadeIn()
-    $("#createStripeAccountBtn").fadeIn()
-  })
-
-  $("#accountOnboardingBtn").on("click", stripeEvents.onCreateAccountLink)
+  // $("#gettingStarted").on("click", () => {
+  //   $("#propertiesScreen").hide()
+  //   $("#setupPage").fadeIn()
+  //   $("#createStripeAccountBtn").fadeIn()
+  // })
 
   $("#setupPageNavBackBtn").on("click", () => {
     $("#setupPage").hide()
