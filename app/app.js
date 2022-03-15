@@ -7,6 +7,7 @@
 const authEvents = require("../auth/events")
 const propEvents = require("../property/events")
 const tenantEvents = require('../tenant/events')
+const stripeEvents = require('../stripe/events')
 const store = require("./store")
 // const navEvents = require('../navigation/navigation')
 
@@ -25,11 +26,14 @@ $(() => {
   $("#tenantInfoScreen").hide()
   $("#confirmDeleteContainer").hide()
   $("#propDetailsEdith4").hide()
-  $("#propEditCancel").hide()
   $("#propertyEditFormContainer").hide()
   $("#alertMessage").hide()
   $("#confirmTenantDeleteContainer").hide()
   $("#tenantEditModalScreen").hide()
+  $("#propertyEditModalScreen").hide()
+  $("#createStripeAccountBtn").hide()
+  $("#accountOnboardingBtn").hide()
+  $("#editStripeAccountBtn").hide()
 
   $("#landingPgLoginBtn").on("click", () => {
     $("#landingPage").hide()
@@ -41,20 +45,19 @@ $(() => {
     $("#signupScreen").fadeIn()
   })
 
+  //This needs to call api to get all updated props in case prop edited. Same issue as the tenant update.
   $("#tenantScreenBackBtn").on("click", () => {
     $("#tenantScreen").hide()
     $("#propertiesScreen").fadeIn()
-  })
-  //we want to hide the step to add tenant bankAccount information. We will add this on each tenants Individual page.
-
-  $("#stepThreeBtn").on("click", () => {
-
   })
 
   $("#gettingStarted").on("click", () => {
     $("#propertiesScreen").hide()
     $("#setupPage").fadeIn()
+    $("#createStripeAccountBtn").fadeIn()
   })
+
+  $("#accountOnboardingBtn").on("click", stripeEvents.onCreateAccountLink)
 
   $("#setupPageNavBackBtn").on("click", () => {
     $("#setupPage").hide()
@@ -68,6 +71,7 @@ $(() => {
   let logoutBtn = $("#logoutBtn")
   let tenantEditForm = $("#tenantModalEditForm")
   let confirmTenantDelete = $("#yesDeleteTenant")
+  let propertyEditForm = $("#propertyEditModalForm")
 
 
   let toggleSigninBtn = $("#toLogin")
@@ -85,8 +89,9 @@ $(() => {
   signUpForm.on("submit", authEvents.onSignUp)
   signInForm.on("submit", authEvents.onSignIn)
   logoutBtn.on("click", authEvents.onSignOut)
-  tenantEditForm.on("submit", tenantEvents.onUpdateTenant)
   confirmTenantDelete.on("click", tenantEvents.onDestroyTenant)
+  tenantEditForm.on("submit", tenantEvents.onUpdateTenant)
+  propertyEditForm.on("submit", propEvents.onEditProperty)
 
   //Navigate to addPropertyScreen from home
   $("#propertyAddBtn").on("click", () => {
@@ -156,11 +161,18 @@ $(() => {
     $("#tenantInfoScreen").fadeIn()
   })
 
-  //Navigate Back
+  // Navigate From Tenant Info view Back to property details
+  // After a user edits a tenant they hit back to navigate
+  // new code below hits backend for up2date list of tenants.
   $("#tenantInfoScreenBackBtn").on("click", () => {
-    store.tenant = null
+    console.log(store.tenant.property)
+    let id = store.tenant.property
+    tenantEvents.onReadTenants(id)
     $("#tenantInfoScreen").hide()
     $("#tenantScreen").fadeIn()
+    $("#confirmTenantDeleteContainer").hide()
+    $("#tenantInfoLeftContainer").show()
+    store.tenant = null
   })
 
   //Navigate to Profile Screen
@@ -185,32 +197,22 @@ $(() => {
 
   //EDIT PROPERTY FUNCTIONALITY
   $("#propEditBtn").on("click", () => {
-    $("#propDetailsh4").hide()
-    $("#propDetailsEdith4").fadeIn()
-    $("#propDelete").hide()
-    $("#propEditBtn").hide()
-    $("#propEditCancel").fadeIn()
-    $("#propertyDetailsInfoTenantScreen").hide()
-    $("#propertyEditFormContainer").fadeIn()
+    $("#propertyEditModalScreen").fadeIn()
   })
 
   $("#propEditCancel").on("click", () => {
-    $("#propDetailsEdith4").hide()
-    $("#propDetailsh4").fadeIn()
-    $("#propEditCancel").hide()
-    $("#propDelete").fadeIn()
-    $("#propEditBtn").fadeIn()
-    $("#propertyEditFormContainer").hide()
-    $("#propertyDetailsInfoTenantScreen").fadeIn()
+    $("#propertyEditModalScreen").fadeOut()
   })
 
   let propEditForm = $("#propertyEditForm")
   propEditForm.on("submit", propEvents.onEditProperty)
 
   $("#editPropSave").on("click", () => {
+    // 1. Close Edit Prop Modal
+    // 2. Render new data to prop details
+    // 3.
     $("#propDetailsEdith4").hide()
     $("#propDetailsh4").fadeIn()
-    $("#propEditCancel").hide()
     $("#propDelete").fadeIn()
     $("#propEditBtn").fadeIn()
     $("#propertyEditFormContainer").hide()

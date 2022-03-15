@@ -168,13 +168,10 @@ const onUpdateTenantFailure = (responseData) => {
 
 //Delete Tenant
 const onDeleteTenantSuccess = (responseData) => {
-  console.log(responseData)
-  // need an additional api call to get all landlords remaining tenants.
-  console.log(store)
   let propId = store.tenant.property
   onReadTenantsAfterDelete(propId)
-  store.tenant = null
-  console.log(store)
+  $("#confirmTenantDeleteContainer").hide()
+  $("#tenantInfoLeftContainer").show()
 }
 
 const onDeleteTenantFailure = (responseData) => {

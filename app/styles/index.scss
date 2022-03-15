@@ -103,25 +103,6 @@
   margin-bottom: 40px;
 }
 
-.setupPgStepsTwo {
-  background-color: rgb(205, 252, 212);
-  border-radius: 10px;
-  width: 80%;
-  margin: 0 auto;
-  height: auto;
-  padding: 20px;
-  margin-bottom: 40px;
-}
-
-.setupPgStepsThree {
-  background-color: rgb(210, 209, 245);
-  border-radius: 10px;
-  width: 80%;
-  margin: 0 auto;
-  height: auto;
-  padding: 20px;
-}
-
 .stepOne {
   background-color: rgb(255, 163, 163);
   width: auto;
@@ -134,6 +115,7 @@
   background-color: white;
   border-radius: 10px;
   padding: 10px;
+  margin: 0 auto;
   cursor: pointer;
   width: 200px;
   height: 50px;
@@ -146,58 +128,6 @@
   color: white;
   background-color: rgb(255, 163, 163);
 }
-
-.stepTwo {
-  background-color: rgb(93, 210, 61);
-  width: auto;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.stepTwoBtn {
-  border: 3px solid rgb(93, 210, 61);
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  transition: 150ms ease-in-out;
-  color: rgb(93, 210, 61);
-  transition: 150ms ease-in-out;
-}
-
-.stepTwoBtn:hover {
-  background-color: rgb(93, 210, 61);
-  color: white;
-}
-
-.stepThree {
-  background-color: rgb(117, 147, 247);
-  width: auto;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.stepThreeBtn {
-  border: 3px solid rgb(117, 147, 247);
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  transition: 150ms ease-in-out;
-  color: rgb(117, 147, 247);
-  transition: 150ms ease-in-out;
-}
-
-.stepThreeBtn:hover {
-  background-color: rgb(117, 147, 247);
-  color: white;
-}
-
-
 
 /* -- Message -- */
 .message {
@@ -387,8 +317,8 @@
 }
 
 .propertyAddBtn:hover {
-  background-color: #e9fcff;
-  color: black;
+  background-color: rgb(117, 147, 247);
+  color: white;
 }
 
 .propertyGrid {
@@ -1189,6 +1119,61 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+// Property Edit Modal
+
+.propertyEditModalScreen {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.propertyEditModalContainer {
+  width: 50%;
+  height: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propertyEditModalContainer h4 {
+  width: auto;
+  text-align: center;
+  margin: 10px auto;
+  color: rgb(117, 147, 247);
+}
+
+.propertyEditModalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.propertyEditModalFormInput {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid rgb(117, 147, 247);
+  padding: 10px;
+  outline: none;
+  transition: 150ms ease-in-out;
+  color: rgb(117, 147, 247);
+  border-radius: 10px;
+}
+
 
 // profile screen =---------------------------------
 

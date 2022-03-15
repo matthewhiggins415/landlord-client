@@ -1,7 +1,5 @@
 const store = require('../app/store')
-const propEvents = require('./events')
 const api = require("./api")
-const { property } = require('../app/store')
 const tenantEvents = require('../tenant/events')
 
 const onGetPropertyDetails = (id) => {
@@ -76,7 +74,6 @@ const createPropFailure = (responseData) => {
 
 //Get Users Properties functionality
 const getPropertiesSuccess = (responseData) => {
-  console.log(store)
   store.properties = responseData.properties
   let properties = store.properties
 
@@ -210,10 +207,13 @@ const destroyPropFailure = (responseData) => {
 // UPDATE A property
 const updatePropSuccess = (responseData) => {
   console.log(responseData)
+  store.property = null
   store.property = responseData.property
 
   let prevDetails = document.getElementById("propertyDetailsInfoTenantScreen")
   removeAllChildNodes(prevDetails)
+
+  $("#propertyEditModalScreen").hide()
 
   let div = $("#propertyDetailsInfoTenantScreen")
 

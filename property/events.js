@@ -58,7 +58,7 @@ const onEditProperty = (e) => {
       DayRentDue
     }
   }
-  //api call
+  
   api.updateASingleProperty(formData)
   .then(ui.updatePropSuccess)
   .catch(ui.updatePropFailure)

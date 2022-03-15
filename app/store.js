@@ -1,13 +1,16 @@
 const store = {
   user: {
     name: null,
-    email: null,
+    id: null,
     token: null
   },
   properties: [],
   property: null,
   tenants: [],
-  tenant: null
+  tenant: null, 
+  stripeIsCreated: false, 
+  stripeIsActive: false, 
+  stripeAccountId: null
 }
 
 module.exports = store

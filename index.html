@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>easyRent</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -43,24 +43,17 @@
           <h2>easyRent</h2>
           <button class="navBtn">logout</button>
         </nav>
+
         <div class="setupPgContainer">
           <div class="setupPgStepsOne">
-            <p class="stepOne">Step 1</p>
-            <h3>Securely link your bank account</h3>
-            <p>As a landlord, add your preferred bank account for accepting payments from tenants.</p>
-            <button class="stepOneBtn">Link Bank Account</button>
-          </div>
-          <div class="setupPgStepsTwo" id="setupPgStepsTwo">
-            <p class="stepTwo">Step 2</p>
-            <h3>Invite tenants to link their bank account</h3>
-            <p>Tenants need to enter their own banking info, so send them an invite to do so here.</p>
-            <button class="stepTwoBtn">Invite Tenants</button>
-          </div>
-          <div class="setupPgStepsThree">
-            <p class="stepThree">Step 2</p>
-            <h3>Manage properties</h3>
-            <p>Create and organize your properties and tenants in a simple and secure environment.</p>
-            <button class="stepThreeBtn" id="stepThreeBtn">Setup Properties</button>
+            <h1 class="stepOne">How It Works</h1>
+            <h6>IMPORTANT: easyRent will enable you to collect payments from your tenants, but first you are required create your account then enter your banking details in the onboarding flow. Once complete you can come back to edit those details if you need to.</h6>
+            <p>Create your account</p>
+            <p>Complete onboarding</p>
+            
+            <button class="stepOneBtn" id="createStripeAccountBtn">Create Account</button>
+            <button class="stepOneBtn" id="accountOnboardingBtn">Begin Onboarding </button>
+            <button class="stepOneBtn" id="editStripeAccountBtn">Edit Business Details</button>
           </div>
         </div>
       </section>
@@ -129,6 +122,30 @@
         </form>
       </section>
 
+      <section class="propertyEditModalScreen" id="propertyEditModalScreen">
+        <div class="propertyEditModalContainer" id="propertyEditModalContainer">
+          <h4>Edit Property</h4>
+          <form id="propertyEditModalForm" class="propertyEditModalForm">
+            <input type="text" class="propertyEditModalFormInput" placeholder="address"
+            name="address" required/>
+            <input type="number"
+            class="propertyEditModalFormInput"
+            name="numOfUnits"
+            placeholder="numbers of units" required/>
+            <input type="number"
+            class="propertyEditModalFormInput"
+            name="totalRent"
+            placeholder="total monthly rent" required/>
+            <input type="number"
+            class="propertyEditModalFormInput"
+            name="DayRentDue"
+            placeholder="what day of month is rent due?" required/>
+            <button type="submit" id="editPropSave" class ="propDelete">Save</button>
+            <button id="propEditCancel" class="propDelete">Cancel</button>
+          </form>
+        </div>
+      </section>
+
       <section class="tenantScreen" id="tenantScreen">
         <div class="propertyScreenNav">
           <button class="navBtn" id="tenantScreenBackBtn">Back</button>
@@ -144,42 +161,18 @@
             <div class="propDetailsContainer">
               <h4 id="propDetailsh4" class="propDetailsh4"
               >Property Details</h4>
-              <h4 id="propDetailsEdith4"
-              class="propDetailsh4"
-              >Edit Property</h4>
               <div class="propertyDetailsInfo" id="propertyDetailsInfoTenantScreen">
               </div>
-
-              <div class="propertyEditFormContainer" id="propertyEditFormContainer">
-                <form id="propertyEditForm" class="propertyEditForm">
-                  <input type="text" class="propertyEditFormInput" placeholder="address"
-                  name="address" required/>
-                  <input type="number"
-                  class="propertyEditFormInput"
-                  name="numOfUnits"
-                  placeholder="numbers of units" required/>
-                  <input type="number"
-                  class="propertyEditFormInput"
-                  name="totalRent"
-                  placeholder="total monthly rent" required/>
-                  <input type="number"
-                  class="propertyEditFormInput"
-                  name="DayRentDue"
-                  placeholder="what day of month is rent due?" required/>
-                  <button type="submit" id="editPropSave" class ="propDelete">Save</button>
-                </form>
+              <div class="propertyDetailsBtnContainer">
+                <button class="propDelete" type="button" id="propDelete">Delete Property</button>
+                <button id="propEditBtn" class="propDelete">Edit Property</button>
               </div>
+
 
               <div class="confirmDeleteContainer" id="confirmDeleteContainer">
                 <h4>Confirm Deletion</h4>
                 <button id="yesDeleteProp" class="yesDeleteProp">Yes</button>
                 <button id="noDeleteProp" class="noDeleteProp">No</button>
-              </div>
-
-              <button id="propEditCancel" class="propDelete">Cancel</button>
-              <div class="propertyDetailsBtnContainer">
-                <button class="propDelete" type="button" id="propDelete">Delete Property</button>
-                <button id="propEditBtn" class="propDelete">Edit Property</button>
               </div>
             </div>
             <div class="tenantContainer">

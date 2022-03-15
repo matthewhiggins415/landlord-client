@@ -44,13 +44,24 @@ const signUpFailure = (responseData) => {
 
 //Log in success
 const logInSuccess = (responseData) => {
-  console.log(responseData)
   let token = responseData.user.token
+  let email = responseData.user.email
+  let id = responseData.user._id
+  let stripeIsCreated = responseData.user.stripeAccountCreated
+  let stripeIsActive = responseData.user.stripeAccountActive
+  let stripeAccountId = responseData.user.stripeId
+
   store.user.token = token
-  $("#loginScreen").hide()
+  store.user.email = email
+  store.user.id = id
+  store.stripeIsCreated = stripeIsCreated
+  store.stripeIsActive = stripeIsActive
+  store.stripeAccountId = stripeAccountId
+  $("#loginScreen").css("display", "none")
   $("#propertiesScreen").show()
   propEvents.onGetProperties()
   fireMessage("Login Successful!")
+  console.log(store)
 }
 
 //Log in failure
@@ -64,9 +75,16 @@ const logInFailure = (responseData) => {
 //Logout Success
 const logOutSuccess = (responseData) => {
   console.log(responseData)
+  console.log(store)
   $("#propertiesScreen").hide()
   $("#loginScreen").show()
   fireMessage("Logout Successful!")
+  store.user.token = null
+  store.user.email = null
+  store.user.id = null
+  store.stripeIsCreated = null
+  store.stripeIsActive = null
+  store.stripeAccountId = null
 }
 
 //Logout Failure
