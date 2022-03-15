@@ -47,16 +47,11 @@ const logInSuccess = (responseData) => {
   let token = responseData.user.token
   let email = responseData.user.email
   let id = responseData.user._id
-  let stripeIsCreated = responseData.user.stripeAccountCreated
-  let stripeIsActive = responseData.user.stripeAccountActive
-  let stripeAccountId = responseData.user.stripeId
 
   store.user.token = token
   store.user.email = email
   store.user.id = id
-  store.stripeIsCreated = stripeIsCreated
-  store.stripeIsActive = stripeIsActive
-  store.stripeAccountId = stripeAccountId
+
   $("#loginScreen").css("display", "none")
   $("#propertiesScreen").show()
   propEvents.onGetProperties()
@@ -82,9 +77,7 @@ const logOutSuccess = (responseData) => {
   store.user.token = null
   store.user.email = null
   store.user.id = null
-  store.stripeIsCreated = null
-  store.stripeIsActive = null
-  store.stripeAccountId = null
+ 
 }
 
 //Logout Failure
