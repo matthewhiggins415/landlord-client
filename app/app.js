@@ -7,7 +7,6 @@
 const authEvents = require("../auth/events")
 const propEvents = require("../property/events")
 const tenantEvents = require('../tenant/events')
-const stripeEvents = require('../stripe/events')
 const store = require("./store")
 // const navEvents = require('../navigation/navigation')
 
