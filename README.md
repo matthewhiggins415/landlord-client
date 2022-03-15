@@ -15,13 +15,13 @@ This project is a platform for landlords and tenants to exchange money automatic
 4. Organize your tenants
 
 ### Wireframes:
-![General Flow Wireframe](https://imgur.com/gallery/Z5Nm2of?raw=true)
-![Profile View Wireframe](https://imgur.com/gallery/yiWUYet?raw=true)
-![Tenant Details View Wireframe](https://imgur.com/gallery/zuLUzVO?raw=true)
+[General Flow Wireframe](https://imgur.com/gallery/Z5Nm2of?raw=true)
+[Profile View Wireframe](https://imgur.com/gallery/yiWUYet?raw=true)
+[Tenant Details View Wireframe](https://imgur.com/gallery/zuLUzVO?raw=true)
 
 
 ### Landlord User Story:
-![Landlord User Story](https://imgur.com/gallery/P8Y3Zyk?raw=true)
+[Landlord User Story](https://imgur.com/gallery/P8Y3Zyk?raw=true)
 
 ### How it works Technically:
 1. A user signs up as a landlord through the registration form.
