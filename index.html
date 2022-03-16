@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>easyRent</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <link rel="stylesheet" href="./app/styles/index.scss">
+
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="message" id="alertMessage"></div>
+
+
+
+      <section class="landingPage" id="landingPage">
+        <nav class="propertyScreenNav">
+          <h2>easyRent</h2>
+          <button class="landingPgBtnLogin" id="landingPgLoginBtn">login</button>
+        </nav>
+        <div class="landingPgCallToActionTop">
+          <div class="landingScreenTopLeft">
+            <h2>Automatically Collect Payments from your Tenants</h2>
+            <button class="landingPgBtn"
+          id="landingPgRegisterBtn">Register</button>
+          </div>
+          <div class="landingScreenTopRight">
+
+          </div>
+        </div>
+      </section>
+
+      <section class="signup" id="signupScreen">
+        <div class="propertyScreenNav">
+          <h2 class="logo">easyRent</h2>
+          <button class="landingPgBtnLogin" id="toLogin">Login</button>
+        </div>
+        <form class="signup-form" id="signupForm">
+          <h2>Register</h2>
+          <input class="signup-input" name="credentials[email]" id="signUpEmail" placeholder="email" type="email" required/>
+          <input class="signup-input" name="credentials[password]" id="signUpPw" placeholder="password" type="password" required/>
+          <input class="signup-input" name="credentials[password_confirmation]" id="signUpPwConfirm" placeholder="confirm password"  type="password" required/>
+          <button class="signup-btn" id="signUpBtn" type="submit">Sign Up</button>
+        </form>
+
+      </section>
+
+      <section class="loginScreen" id="loginScreen">
+        <div class="propertyScreenNav">
+          <h2 class="logo">easyRent</h2>
+          <button class="landingPgBtnLogin" id="toRegister">Register</button>
+        </div>
+        <form class="signup-form" id="signInForm">
+          <h2>Login</h2>
+          <input class="signup-input" placeholder="email" name="credentials[email]" type="email" required/>
+          <input class="signup-input" placeholder="password" name="credentials[password]" type="password" required/>
+          <button class="signup-btn" type="submit">Sign In</button>
+        </form>
+      </section>
+
+      <section class="propertyScreen" id="propertiesScreen">
+        <div class="propertyScreenNav">
+          <h2 class="logo">easyRent</h2>
+          <div class="propertyScreenNavRight">
+            <button class="navBtn" id="PropScreenNavProfileBtn">Profile</button>
+            <button class="navBtn" id="logoutBtn">Logout</button>
+          </div>
+        </div>
+
+        <div class="propertyListContainer">
+          <div class="propertyFunctionality">
+            <h3>Properties</h3>
+            <button class="navBtn" id="propertyAddBtn">Add Property</button>
+          </div>
+          <div class="propertyGrid" id="propertiesList">
+
+          </div>
+        </div>
+      </section>
+
+      <section class="propertyFormScreen" id="propertyFormScreen">
+        <div class="propertyScreenNav">
+          <button class="navBtn" id="propertyFormScreenBack">Back</button>
+          <h2 class="logo">easyRent</h2>
+        </div>
+        <form class="signup-form" id="addAPropertyForm">
+          <h2>Create Property</h2>
+          <input class="signup-input" name="address" placeholder="Street Address" type="text" required/>
+          <input class="signup-input" name="numOfUnits" placeholder="Number of Units" type="number" required/>
+          <input class="signup-input" name="totalRent" placeholder="Total Rent" type="number" required/>
+          <input class="signup-input" name="DayRentDue" placeholder="Day of Month Rent is Due" type="number" required/>
+          <button class="signup-btn" id="propertyFormBtn" type="submit">Complete</button>
+        </form>
+      </section>
+
+      <section class="propertyEditModalScreen" id="propertyEditModalScreen">
+        <div class="propertyEditModalContainer" id="propertyEditModalContainer">
+          <h4>Edit Property</h4>
+          <form id="propertyEditModalForm" class="propertyEditModalForm">
+            <input type="text" class="propertyEditModalFormInput" placeholder="address"
+            name="address" required/>
+            <input type="number"
+            class="propertyEditModalFormInput"
+            name="numOfUnits"
+            placeholder="numbers of units" required/>
+            <input type="number"
+            class="propertyEditModalFormInput"
+            name="totalRent"
+            placeholder="total monthly rent" required/>
+            <input type="number"
+            class="propertyEditModalFormInput"
+            name="DayRentDue"
+            placeholder="what day of month is rent due?" required/>
+            <button type="submit" id="editPropSave" class ="propDelete">Save</button>
+            <button id="propEditCancel" class="propDelete">Cancel</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="tenantScreen" id="tenantScreen">
+        <div class="propertyScreenNav">
+          <button class="navBtn" id="tenantScreenBackBtn">Back</button>
+
+          <div class="propertyScreenNavRight">
+            <button class="navBtn" id="tenantScreenServicesBtn">Services</button>
+            <!-- <button class="navBtn" id="TenantScreenNavgettingStarted">Getting Started</button> -->
+            <button class="navBtn" id="TenantScreenNavlogoutBtn">Logout</button>
+          </div>
+        </div>
+        <div class="tenantScreenBody">
+          <div class="tenantScreenBodyTop">
+            <div class="propDetailsContainer">
+              <h4 id="propDetailsh4" class="propDetailsh4"
+              >Property Details</h4>
+              <div class="propertyDetailsInfo" id="propertyDetailsInfoTenantScreen">
+              </div>
+              <div class="propertyDetailsBtnContainer">
+                <button class="propDelete" type="button" id="propDelete">Delete Property</button>
+                <button id="propEditBtn" class="propDelete">Edit Property</button>
+              </div>
+
+
+              <div class="confirmDeleteContainer" id="confirmDeleteContainer">
+                <h4>Confirm Deletion</h4>
+                <button id="yesDeleteProp" class="yesDeleteProp">Yes</button>
+                <button id="noDeleteProp" class="noDeleteProp">No</button>
+              </div>
+            </div>
+            <div class="tenantContainer">
+              <h4 class="tenantContainerH4">Tenants</h4>
+              <div class="tenantGrid" id="tenantGrid">
+
+              </div>
+              <button class="tenantAddBtn" id="tenantAddBtn">Add Tenant</button>
+            </div>
+          </div>
+          <div class="propertyPaymentsContainer">
+            <div class="propertyPaymentsContainerNav">
+              <h4>Payments</h4>
+              <div class="paymentBtnContainer">
+                <button class="paymentBtns">Incoming</button>
+                <button class="paymentBtns">Outgoing</button>
+              </div>
+            </div>
+            <div class="paymentsList">
+              <div class="payment">
+                <p>DATE</p>
+                <p>AMOUNT</p>
+                <p>NAME</p>
+                <button class="tenantDetailsScreenBtn">DETAILS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tenantFormScreen" id="tenantFormScreen">
+        <div class="propertyScreenNav">
+          <button class="navBtn" id="tenantFormScreenBackBtn">Back</button>
+          <h2>easyRent</h2>
+        </div>
+        <form id="tenantForm" class="signup-form">
+          <h2>Create Tenant</h2>
+          <input class="signup-input" name="firstName" type="text" placeholder="Tenant First Name" required/>
+          <input class="signup-input" name="lastName" type="text" placeholder="Tenant Last Name" required/>
+          <input class="signup-input" name="email" type="text" placeholder="Tenant Email" required/>
+          <input class="signup-input" name="phone" type="text" placeholder="Tenant Phone" required/>
+          <input class="signup-input" name="rentAmount" type="number" placeholder="Tenant Monthly Rent Amount" required/>
+          <input class="signup-input" name="rentDate" type="number" placeholder="Day of Month Rent Due" required/>
+          <button class="signup-btn" type="submit" id="createTenantFormBtn">Complete</button>
+        </form>
+      </section>
+
+      <section class="tenantInfoScreen" id="tenantInfoScreen">
+        <div class="propertyScreenNav">
+          <button id="tenantInfoScreenBackBtn" class="navBtn">Back</button>
+          <h2>easyRent</h2>
+        </div>
+
+        <div class="tenantScreenBody">
+          <div class="tenantInfoSection">
+
+            <div class="tenantInfoLeftContainer" id="tenantInfoLeftContainer">
+              <div class="tenantInformation" id="tenantInformation">
+              </div>
+              <div class="tenantInformationBtnContainer">
+                <button class="tenantDeleteBtn" id="tenantDeleteBtn">Delete</button>
+                <button class="tenantEditBtn" id="tenantEditBtn">Edit</button>
+              </div>
+            </div>
+
+            <div class="confirmTenantDeleteContainer" id="confirmTenantDeleteContainer">
+              <h4>Confirm Deletion</h4>
+              <button id="yesDeleteTenant" class="yesDeleteTenant">Yes</button>
+              <button id="noDeleteTenant" class="noDeleteTenant">No</button>
+            </div>
+
+            <div class="tenantFunctionality">
+              <button class="tenantFuncButton">Add Payment Method</button>
+              <button class="tenantFuncButton">Credit Check</button>
+            </div>
+
+          </div>
+          <div class="tenantPaymentsContainer">
+            <div class="tenantInfoFunctionality">
+              <h2>Tenant Payments</h2>
+            </div>
+            <div class="tenantInfoPaymentHistory">
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="tenantEditModalScreen" id="tenantEditModalScreen">
+        <div class="tenantEditModalContainer">
+          <h4>Edit Tenant</h4>
+          <form class="tenantModalEditForm" id="tenantModalEditForm">
+            <input class="signup-input" name="firstName" type="text" placeholder="Tenant First Name" required/>
+            <input class="signup-input" name="lastName" type="text" placeholder="Tenant Last Name" required/>
+            <input class="signup-input" name="email" type="text" placeholder="Tenant Email" required/>
+            <input class="signup-input" name="phone" type="text" placeholder="Tenant Phone" required/>
+            <input class="signup-input" name="rentAmount" type="number" placeholder="Tenant Monthly Rent Amount" required/>
+            <input class="signup-input" name="rentDate" type="number" placeholder="Day of Month Rent Due" required/>
+            <div class="tenantModalBtnContainer">
+              <button class="signup-btn" type="submit">Update</button>
+              <button class="signup-btn" id="tenantEditModalCancelBtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+      </section>
+
+
+      <section class="profileScreen" id="profileScreen">
+        <nav class="propertyScreenNav">
+          <button class="navBtn" id="profileBackBtn">back</button>
+          <h2>easyRent</h2>
+        </nav>
+        <div class="profileBodyContainer">
+          <div class="profileBodyNav">
+            <button class="profileBodyNavBtn">Profile</button>
+            <button class="profileBodyNavBtn">Edit Profile</button>
+            <button class="profileBodyNavBtn">Plan</button>
+            <button class="profileBodyNavBtn" id="profileNavPasswordsBtn">Passwords</button>
+            <button class="profileBodyNavBtn">Support</button>
+          </div>
+          <div class="profileViewContainer">
+            <div class="profilePasswordsView" id="profilePasswordsView">
+              <h2>Create a new password</h2>
+              <form class="changePasswordForm">
+                <input class="changePasswordFormInput" placeholder="old password" required/>
+                <input class="changePasswordFormInput" placeholder="new password" required/>
+                <input class="changePasswordFormInput" placeholder="confirm new password" required/>
+                <button class="changePasswordFormBtn" type="submit">Submit</button>
+              </form>
+            </div>
+
+
+
+
+
+          </div>
+
+        </div>
+      </section>
+    </body>
+</html>

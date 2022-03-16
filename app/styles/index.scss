@@ -1,0 +1,1274 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Landing Page -------
+.landingPage {
+ display: flex;
+ flex-direction: column;
+ width: 100vw;
+ height: 100vh;
+}
+
+.landingPgBtn {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.landingPgBtnLogin {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.landingPgCallToActionTop {
+  width: 70%;
+  height: 500px;
+  margin: 25px auto;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.landingScreenTopLeft {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.landingScreenTopLeft h2 {
+  text-align: center;
+}
+
+.landingScreenTopRight {
+  background-image: url("../../images/online-transaction.svg");
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.landingPgCallToAction h2 {
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+// Setup Page -----
+.setupPage {
+ display: flex;
+ flex-direction: column;
+ width: 100vw;
+ height: 100vh;
+}
+
+.setupPgContainer{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.setupPgStepsOne {
+  background-color: rgb(252, 205, 205);
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.stepOne {
+  background-color: rgb(255, 163, 163);
+  width: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.stepOneBtn {
+  border: 3px solid rgb(255, 163, 163);
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  transition: 150ms ease-in-out;
+  color: rgb(255, 163, 163);
+  transition: 150ms ease-in-out;
+}
+
+.stepOneBtn:hover {
+  color: white;
+  background-color: rgb(255, 163, 163);
+}
+
+/* -- Message -- */
+.message {
+  background-color: rgb(117, 147, 247);
+  border: none;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 50px;
+  right: 50px;
+  width: 300px;
+  height: 100px;
+}
+
+/*-- SIGNUP SCREEN --*/
+
+.signup {
+  width: 100vw;
+  height: 100vh;
+}
+
+.signup-form {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 30%;
+}
+
+.signup-form h2 {
+  text-align: center;
+  color:rgb(117, 147, 247);
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: 15px auto;
+}
+
+.signup-input{
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid rgb(117, 147, 247);
+  padding: 10px;
+  outline: none;
+  transition: 150ms ease-in-out;
+  color: rgb(117, 147, 247);
+  border-radius: 10px;
+}
+
+.signup-btn{
+  width: 80%;
+  background-color: rgb(117, 147, 247);
+  color: white;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+}
+
+/*-- LOGIN/Register Forms plus login screen --*/
+
+.loginScreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.signin-form {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 30%;
+}
+
+/*-- Properties SCREEN --*/
+
+.propertyScreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.propertyScreenNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  width: auto;
+  margin: 10px 10px 0px 10px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.logo {
+  width: 30%;
+  text-align: center;
+}
+
+.propertyScreenNavRight {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navBtn {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.navBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.propertyTop h2 {
+  margin-right: 20px;
+}
+
+.propertyListContainer {
+  width: auto;
+  height: auto;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+
+.propertyFunctionality{
+  width: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.propertyFunctionality h3 {
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.propertyAddBtn {
+  margin-right: 20px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 150ms ease-in;
+}
+
+.propertyAddBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.propertyGrid {
+  min-height: 500px;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.property {
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+  padding: 10px;
+  margin: 3px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 150ms ease;
+}
+
+.property:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.propBtn {
+  color: black;
+  background-color: transparent;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+
+.propBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.bottom {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*-- Property FORM Screen --*/
+
+.propertyFormScreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.propertyFormScreenTop h2 {
+  margin-right: 20px;
+}
+
+.propertyForm {
+  background-color: gold;
+  border-radius: 20px;
+  width: 50%;
+  margin: 20px auto;
+  height: auto;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propertyForm h2 {
+  background-color: lightyellow;
+  border-radius: 10px;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 20px auto;
+}
+
+.propertyFormInput {
+  width: 80%;
+  padding: 10px;
+  background-color: rgb(117, 147, 247);
+  color: white;
+  border: none;
+  outline: none;
+  margin: 5px auto;
+  transition: 150ms ease-in-out;
+}
+
+.propertyFormInput:focus {
+  background-color: lightyellow;
+  border-radius: 10px;
+  border-bottom: none;
+}
+
+.propertyFormInput:hover {
+  background-color: lightyellow;
+  border-radius: 10px;
+  border-bottom: none;
+}
+
+.propertyFormInput::placeholder {
+  color: black;
+}
+
+.propertyFormBtn {
+  background-color:transparent;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 20px auto;
+}
+
+.propertyFormBtn:hover {
+  background-color: lightyellow;
+}
+
+
+/*-- Tenant Screen --*/
+
+.tenantScreen {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.tenantScreenBodyTop {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.propertyPaymentsContainer {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0px 10px 10px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 500px;
+}
+
+.propertyPaymentsContainerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.propertyPaymentsContainerNav h4 {
+  padding: 10px;
+}
+
+.paymentsList {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.payment {
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+  padding: 5px;
+  margin: 3px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 150ms ease-in-out;
+}
+
+.payment p {
+  padding: 10px;
+}
+
+.payment:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.paymentBtnContainer {
+  display: flex;
+}
+
+.paymentBtns {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+
+.paymentBtns:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantScreenBackBtn {
+  margin-left: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  transition: 150ms ease-in-out;
+}
+
+.tenantScreenBackBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantScreenBody {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propDetailsContainer{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 10px 5px 5px 10px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.propDetailsh4 {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.propertyDetailsInfo {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propertyEditForm {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propertyEditFormInput {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  margin: 5px;
+  transition: 150ms ease-in-out;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(206, 242, 250);
+}
+
+.propertyEditFormInput:focus {
+  background-color: rgb(206, 242, 250);
+  border-radius: 10px;
+}
+
+.confirmDeleteContainer {
+  width: 90%;
+  margin: 0 auto;
+  height: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.propertyDetailsBtnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+}
+
+.propDelete {
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  width: 50%;
+  margin: 2px auto;
+  padding: 10px;
+  border: none;
+}
+
+.propDelete:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.yesDeleteProp {
+  padding: 10px;
+  background: transparent;
+  color: black;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  transition: 150ms ease-in-out;
+}
+
+.yesDeleteProp:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+
+}
+
+.noDeleteProp {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: black;
+  letter-spacing: 2px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 150ms ease-in-out;
+}
+
+.noDeleteProp:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantContainer {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  min-width: 40%;
+  margin: 10px;
+  min-height: 50%;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tenantContainerH4 {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.tenantAddBtn {
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  width: 100%;
+  margin: 2px auto;
+  padding: 10px;
+  border: none;
+}
+
+.tenantAddBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantGrid {
+  width: 100%;
+  height: auto;
+  min-height: 60%;
+}
+
+.tenantDiv {
+  height: auto;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 150ms ease-in-out;
+}
+
+.tenantDiv:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.tenantBtn {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tenantBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+
+/*-- Tenant Form Screen --*/
+
+.tenantFormScreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.tenantFormScreenTop {
+  height: 10%;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.tenantFormScreenTop button {
+  background-color: white;
+  border: 1px solid darkblue;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 1s ease-in-out;
+}
+
+.tenantFormScreenTop button:hover {
+  color: white;
+  background-color: darkblue;
+}
+
+.tenantFormScreenTop h2 {
+  margin-right: 20px;
+}
+
+.tenantForm {
+  border: 1px solid darkblue;
+  box-shadow: 3px 3px 3px darkblue;
+  border-radius: 20px;
+  width: 80%;
+  margin: 20px auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tenantForm h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 15px auto;
+}
+
+.tenantFormInput {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid black;
+  outline: none;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+
+.tenantFormBtn {
+  width: 30%;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid darkblue;
+  background-color: white;
+  transition: 150ms ease-in;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tenantFormBtn:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+
+/*-- Tenant Details Screen --*/
+
+.tenantInfoScreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.tenantInfoTop button {
+  margin-left: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  transition: 150ms ease-in;
+}
+
+.tenantInfoTop button:hover {
+  color: white;
+  background-color: darkblue;
+}
+
+.tenantInfoTop h2 {
+ margin-right: 20px;
+}
+
+.tenantInfoSection {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.tenantInformation {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tenantInfoLeftContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 10px 10px 0px 10px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.confirmTenantDeleteContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.confirmTenantDeleteContainer h4 {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.yesDeleteTenant {
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.yesDeleteTenant:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+
+.noDeleteTenant {
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.noDeleteTenant:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantInformationBtnContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.tenantDeleteBtn {
+  border-radius: 10px;
+  margin: 0px 5px 5px 5px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.tenantDeleteBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantEditBtn {
+  margin: 0px 5px 5px 5px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  transition: 150ms ease-in-out;
+}
+
+.tenantEditBtn:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantInformation p {
+  margin-left: 10px;
+}
+
+.tenantPaymentsContainer {
+  min-height: 350px;
+  width: auto;
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.tenantInfoFunctionality {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.tenantFunctionality {
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  margin: 10px 10px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.tenantFuncButton {
+  padding: 20px;
+  background-color: transparent;
+  margin: 10px 10px 0px 10px;
+  border: none;
+  outline: none;
+  transition: 150ms ease-in-out;
+  border-radius: 10px;
+}
+
+.tenantFuncButton:hover {
+  background-color: rgb(117, 147, 247);
+  color: white;
+}
+
+.tenantInfoFunctionality button {
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+  transition: 150ms ease-in;
+}
+
+.tenantInfoFunctionality button:hover {
+  color: white;
+  background-color: darkblue;
+}
+
+.tenantInfoFunctionality h2 {
+  margin-left: 20px;
+}
+
+.tenantInfoPaymentHistory {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tenantInfoPaymentHistory h4 {
+  text-align: center;
+}
+
+.paymentHistoryData {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ------------------- Tenant Edit Modal ---------------
+
+.tenantEditModalScreen {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.tenantEditModalContainer {
+  width: 50%;
+  height: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.tenantEditModalContainer h4 {
+  width: auto;
+  text-align: center;
+  margin: 10px auto;
+  color: rgb(117, 147, 247);
+}
+
+.tenantModalEditForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.tenantModalBtnContainer {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// Property Edit Modal
+
+.propertyEditModalScreen {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.propertyEditModalContainer {
+  width: 50%;
+  height: auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.propertyEditModalContainer h4 {
+  width: auto;
+  text-align: center;
+  margin: 10px auto;
+  color: rgb(117, 147, 247);
+}
+
+.propertyEditModalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  width: 100%;
+}
+
+.propertyEditModalFormInput {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid rgb(117, 147, 247);
+  padding: 10px;
+  outline: none;
+  transition: 150ms ease-in-out;
+  color: rgb(117, 147, 247);
+  border-radius: 10px;
+}
+
+
+// profile screen =---------------------------------
+
+.profileScreen {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileBodyContainer {
+  display: flex;
+  width: auto;
+  border-radius: 10px;
+  min-height: 500px;
+  height: 70vh;
+  margin: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.profileBodyNav {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 330px;
+  margin: 10px 5px 10px 10px;
+  padding: 20px;
+  width: 20%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+
+.profileViewContainer {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 10px 10px 5px;
+  height: auto;
+}
+
+.profileBodyNavBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.profileBodyNavBtn:hover {
+  background-color: #e9fcff;
+}
+
+.profilePasswordsView{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.changePasswordForm {
+  width: 30%;
+  margin: 0 auto;;
+  height: auto;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid #e9fcff;
+}
+
+.changePasswordFormInput {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.changePasswordFormInput:hover, .changePasswordFormInput:focus {
+  background-color: #e9fcff;
+}
+
+.changePasswordFormBtn {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.changePasswordFormBtn:hover {
+  background-color: #e9fcff;
+}
