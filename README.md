@@ -6,7 +6,7 @@ Inspired by my friend Nick who bought a house and is managing tenants while livi
 1. clone ``` git clone git@github.com:matthewhiggins415/landlord-client.git ```
 2. ``` npm install ```
 3. ``` grunt serve ```
-4. [Kakeibo Backend Repo](https://github.com/matthewhiggins415/tenant-organizer-fullstack) ..should you need it
+4. [easyRent Backend Repo](https://github.com/matthewhiggins415/tenant-organizer-fullstack) ..should you need it
 
 
 ### Wireframes:
