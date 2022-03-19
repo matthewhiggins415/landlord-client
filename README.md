@@ -1,34 +1,14 @@
-# easyRent
+# Welcome to easyRent
 
-This is the frontend of my fullstack project.
-
-### Project's Purpose:
-This project is a platform for landlords and tenants to exchange money automatically. Landlords can organize both properties and tenants in one simple environment, landlords can add payment methods and preferences for each individual tenant of each property. Landlords can automatically collect rents by charging the debit/credit cards of tenants. 
-
-### Benefits for tenants: 
-1. Never be paying fees for late rent and can 
-2. Use credit card to build credit and get points.
-
-### Benefits for landlords:
-2. Automatically collect rents on time ever month.
-3. Organize your investment properties
-4. Organize your tenants
+Inspired by my friend Nick who bought a house and is managing tenants while living there. Nick is great, but a little unorganized. EasyRent is platform for landlords to cleanly organize both properties and tenants of those properties in one simple place.
 
 ### Wireframes:
 <img src="https://user-images.githubusercontent.com/67120920/159135751-a0914eca-033b-42fc-9b75-212c41a5504b.jpg" alt="general wireframe" style="width:550px; height:auto; margin:0 auto;"/>
-[Profile View Wireframe](https://imgur.com/gallery/yiWUYet?raw=true)
-[Tenant Details View Wireframe](https://imgur.com/gallery/zuLUzVO?raw=true)
+<img src="https://user-images.githubusercontent.com/67120920/159135912-6a0c62ba-1607-44e2-9f2c-840ad97c4cc6.jpg" alt="profile wireframe" style="width:550px; height:auto; margin:0 auto;"/>
 
 
 ### Landlord User Story:
-[Landlord User Story](https://imgur.com/gallery/P8Y3Zyk?raw=true)
-
-### How it works Technically:
-1. A user signs up as a landlord through the registration form.
-2. The registration form calls the backend route creating a new user in the Mongo Database
-3. The newly registered user is directed to the login page where credentials are verified in backend and if valid are returned with token
-4. Token gives user access to otherwise restricted pages like adding properties, tenants, profile screen, etc. 
-5. All resources are CRUDable through backend api. 
+<img src="https://user-images.githubusercontent.com/67120920/159135911-edeb34e5-64e1-4b1b-ae7f-e7f01f8eb59e.jpg" alt="profile wireframe" style="width:550px; height:auto; margin:0 auto;"/>
 
 ### Technologies Used:
 1. html
